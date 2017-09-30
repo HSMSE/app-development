@@ -1,5 +1,5 @@
 #Batch
-.bat
+*.bat
 
 #Json
-.json
+*.json
