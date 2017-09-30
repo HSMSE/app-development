@@ -1,6 +1,7 @@
 #Backend Bois
 import tornado.ioloop
 import tornado.web
+import json
 
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
@@ -12,8 +13,11 @@ class MainHandler(tornado.web.RequestHandler):
         r = method()
         self.write(r)
 
-    def hello(self):
-        return "Hello, world."
+    def announcements(self):
+        with open('announcements.json') as announce_data:
+            data = json.load(announce_data)
+
+        return data
 
 def make_app():
     return tornado.web.Application([
