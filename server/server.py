@@ -1,19 +1,22 @@
 #Backend Bois
 import tornado.ioloop
 import tornado.web
-import json
+import json, time, asyncio
 
 class MainHandler(tornado.web.RequestHandler):
-    def get(self):
-        task = self.get_argument('task')
-        self.serve(task)
 
-    def serve(self, task):
+    async def get(self):
+        task = self.get_argument('task')
+        await self.serve(task)
+
+    async def serve(self, task):
         method = getattr(self, task)
-        r = method()
+        r = await method()
+
         self.write(r)
 
-    def announcements(self):
+    async def announcements(self):
+        print("Done")
         with open('announcements.json') as announce_data:
             data = json.load(announce_data)
 
