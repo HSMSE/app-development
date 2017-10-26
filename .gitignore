@@ -3,3 +3,6 @@
 
 #Json
 *.json
+
+#Mac
+*.DS_Store
