@@ -2,7 +2,7 @@
 //  Calculator.swift
 //  MSE Utilities
 //
-//  Created by Randolph Xia on 10/24/17.
+//  Created by Matthew Coudert & Alexandra Eagan on 10/24/17.
 //  Copyright © 2017 HSMSE. All rights reserved.
 //
 
