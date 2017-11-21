@@ -12,69 +12,64 @@ class Calculator: UIViewController {
 
     @IBOutlet weak var display: UILabel!
     var operation = 0
-    var secondNumber:Double = 0
-    var previousNumber:Double = 0
-    var firstInput = false
-    var operationInput = false
-    var operationInputText = false
+    var firstInput = 0.0
+    var secondInput = 0.0
     @IBAction func numbers(_ sender: UIButton) {
-        let input = Int(sender.tag)
-        if((input>=0 && input<=10)||input==17||input==18) {
-            if(operationInputText) {
+        let input = sender.tag
+        switch input {
+        case 1...9:
+            display.text = display.text! + String(input)
+            break
+        case 10...15:
+            if(!(display.text==""||display.text==".")) {
+                firstInput = Double(display.text!)!
+                operation = input
                 display.text = ""
-                operationInputText = false
             }
-            firstInput = true
-            if(input == 17) {
-                display.text = display.text! + "."
-            } else if(input>=0 && input<=10) {
-                display.text = display.text! + String(input)
-            }
-            if(input == 18) {
-                if(display.text != "") {
-                    display.text = String((Double(display.text!)! * -1.0))
-                } else {
-                    display.text = "-"
-                }
-            }
-        }
-        if(input == 16) {
+            break
+        case 16:
+            operation = 0
+            firstInput = 0
+            secondInput = 0
             display.text = ""
-            previousNumber = 0
-            secondNumber = 0
-            firstInput = false
-            operationInput = false
-            operationInputText = false
-        }
-        if(input>=11 && input<=14 && firstInput) {
-            if(operationInput) {
-                previousNumber = Double(getOutput())!
-            } else {
-                previousNumber = Double(display.text!)!
+            break
+        case 17:
+            if(!(display.text?.contains("."))!) {
+                display.text = display.text! + "."
             }
-            if(input == 11) { operation = 1 }
-            if(input == 12) { operation = 2 }
-            if(input == 13) { operation = 3 }
-            if(input == 14) { operation = 4 }
-            display.text = String(previousNumber)
-            operationInput = true
-            operationInputText = true
-        }
-        if(input == 15 && operationInput) {
-            display.text = getOutput()
-            previousNumber = Double(display.text!)!
-            operationInput = false;
+            break
+        case 18:
+            display.text = String(Double(display.text!)! * -1)
+            break
+        case 19:
+            if(operation != 0) {
+                secondInput = Double(display.text!)!
+                display.text = String(operate())
+                operation = 0
+            }
+            break
+        default:
+            break
         }
     }
     
-    func getOutput()->String {
-        secondNumber = Double(display.text!)!
-        if(operation == 1) { return String(previousNumber + secondNumber) }
-        if(operation == 2) { return String(previousNumber - secondNumber) }
-        if(operation == 3) { return String(previousNumber * secondNumber) }
-        if(operation == 4) { return String(previousNumber / secondNumber) }
-        return ""
+    func operate()->Double {
+        switch operation {
+        case 11:
+            return firstInput-secondInput
+        case 12:
+            return firstInput+secondInput
+        case 13:
+            return firstInput*secondInput
+        case 14:
+            return firstInput/secondInput
+        case 15:
+            return pow(firstInput, secondInput)
+        default:
+            return 0
+        }
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
