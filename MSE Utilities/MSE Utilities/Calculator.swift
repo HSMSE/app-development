@@ -20,7 +20,7 @@ class Calculator: UIViewController {
         case 1...9:
             display.text = display.text! + String(input)
             break
-        case 10...15:
+        case 11...14:
             if(!(display.text==""||display.text==".")) {
                 firstInput = Double(display.text!)!
                 operation = input
