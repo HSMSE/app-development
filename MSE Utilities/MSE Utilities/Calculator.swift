@@ -17,10 +17,10 @@ class Calculator: UIViewController {
     @IBAction func numbers(_ sender: UIButton) {
         let input = sender.tag
         switch input {
-        case 1...9:
+        case 0...9:
             display.text = display.text! + String(input)
             break
-        case 11...14:
+        case 11...15:
             if(!(display.text==""||display.text==".")) {
                 firstInput = Double(display.text!)!
                 operation = input
@@ -48,6 +48,12 @@ class Calculator: UIViewController {
                 operation = 0
             }
             break
+        case 20...22:
+            secondInput = 0
+            operation = input
+            firstInput = Double(display.text!)!
+            firstInput = operate()
+            display.text = String(firstInput)
         default:
             break
         }
@@ -65,12 +71,19 @@ class Calculator: UIViewController {
             return firstInput/secondInput
         case 15:
             return pow(firstInput, secondInput)
+        case 20:
+            return sin(firstInput * Double.pi / 180)
+        case 21:
+            return cos(firstInput * Double.pi / 180)
+        case 22:
+            return tan(firstInput * Double.pi / 180)
+        case 23:
+            return log(secondInput)/log(firstInput)
         default:
             return 0
         }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
