@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		766871FF1FFAFACE009ED216 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766871FD1FFAFACE009ED216 /* TestCell.swift */; };
+		766872001FFAFACE009ED216 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 766871FE1FFAFACE009ED216 /* TestCell.xib */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
 		BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD341F9FB53900A02A02 /* ViewController.swift */; };
 		BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2AFD361F9FB53900A02A02 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		766871FD1FFAFACE009ED216 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		766871FE1FFAFACE009ED216 /* TestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2AFD341F9FB53900A02A02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			children = (
 				BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */,
 				BF2AFD341F9FB53900A02A02 /* ViewController.swift */,
+				766871FD1FFAFACE009ED216 /* TestCell.swift */,
+				766871FE1FFAFACE009ED216 /* TestCell.xib */,
 				BF2AFD361F9FB53900A02A02 /* Main.storyboard */,
 				BF2AFD391F9FB53900A02A02 /* Assets.xcassets */,
 				BF2AFD3B1F9FB53900A02A02 /* LaunchScreen.storyboard */,
@@ -255,6 +261,7 @@
 				BF2AFD3D1F9FB53900A02A02 /* LaunchScreen.storyboard in Resources */,
 				BF2AFD3A1F9FB53900A02A02 /* Assets.xcassets in Resources */,
 				BF2AFD6F1F9FBDA200A02A02 /* Calculator.xib in Resources */,
+				766872001FFAFACE009ED216 /* TestCell.xib in Resources */,
 				BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */,
+				766871FF1FFAFACE009ED216 /* TestCell.swift in Sources */,
 				BF2AFD6E1F9FBDA200A02A02 /* Calculator.swift in Sources */,
 				BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */,
 				BF2AFD6A1F9FBD8B00A02A02 /* Announcements.swift in Sources */,
