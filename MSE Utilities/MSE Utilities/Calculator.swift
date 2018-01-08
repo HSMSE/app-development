@@ -48,7 +48,7 @@ class Calculator: UIViewController {
                 operation = 0
             }
             break
-        case 20...22:
+        case 20...23:
             secondInput = 0
             operation = input
             firstInput = Double(display.text!)!
@@ -58,7 +58,7 @@ class Calculator: UIViewController {
             break
         }
     }
-    
+   
     func operate()->Double {
         switch operation {
         case 11:
@@ -78,7 +78,7 @@ class Calculator: UIViewController {
         case 22:
             return tan(firstInput * Double.pi / 180)
         case 23:
-            return log(secondInput)/log(firstInput)
+            return log10(firstInput)
         default:
             return 0
         }
