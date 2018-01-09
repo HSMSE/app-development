@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>HSMSE Announcement Board</title>
+        <meta name="author" content="Benjamin Kosten">
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!--javascript stuff-->
+        <script src="js/scripts.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+
+        <!--google stuff-->
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="725466910946-rnsa530n8hjftk27p573d34g5acu63gr.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+    </head>
+
+    <body>
+        <h1>Announcement Board</h1>
+
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+
+        <!--Announcement Board stuff-->
+        <form action="https://example.com" autocomplete="off">
+        <h4>Date</h4>
+        <input type="date" name="date" required><br>
+        <h4>Subject</h4>
+        <input type="text" name="subject" required><br>
+        <h4>Message</h4>
+        <div id="events">
+            <textarea rows="10" cols="50" name="message" required></textarea><br>
+        </div>
+        <button type="button" id="addEvent"><p>Add Event</p></button>
+        <div id="submitForm">
+            <input type="text" name="task" value="set_announcement" hidden readonly><br>
+            <input type="submit" value="Submit">
+        </div>
+    </body>
+</html>
