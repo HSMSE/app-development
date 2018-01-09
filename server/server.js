@@ -12,6 +12,6 @@ app.get('/',function(req,res){
 //Api Routing
 
 // Starts the server.
-server.listen(3000, function() {
+app.listen(3000, function() {
   console.log('Starting server on port 3000');
 });
