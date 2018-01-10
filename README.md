@@ -6,5 +6,7 @@ student utility app
 * [express.js](https://github.com/expressjs/express)
 * [body-parser](https://www.npmjs.com/package/body-parser)
 * [google-id-token-verifier](https://www.npmjs.com/package/google-id-token-verifier)
+* [python-shell](https://www.npmjs.com/package/python-shell)
+
 ### Todo
 * Have an actual readme
