@@ -6,25 +6,13 @@ const bodyParser = require('body-parser')
 const keys = require('./keys.json')
 const verifier = require('google-id-token-verifier')
 
-const PythonShell = require('python-shell')
+const util = require('./util/util.js')
 
 app.use(express.static(__dirname + '/static'))
 app.use(bodyParser.json())
 
 //util
-var emails = []
-
-PythonShell.run('util/emails.py', function (err, results) {
-    if (err) throw err
-    emails = results
-
-    console.log("Authorized emails:")
-    for(let i = 0; i < emails.length; i++) {
-        emails[i] = emails[i].slice(0, emails[i].length - 1)
-        console.log(emails[i])
-    }
-    emails.push('benkosten@gmail.com')
-})
+var emails = util.getAuthorizedEmails()
 
 //announcement view
 app.get('/',function(req,res) {
@@ -41,7 +29,7 @@ app.post('/g-signin', function(req, res) {
             }
         }
         else {
-            res.status(401).end()
+            res.status(401)
         }
     })
 
