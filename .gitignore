@@ -4,6 +4,8 @@
 #Json
 *.json
 !Contents.json
+!package-lock.json
+!package.json
 
 #########################
 # .gitignore file for Xcode4 and Xcode5 Source projects
