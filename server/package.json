@@ -20,6 +20,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "google-id-token-verifier": "^0.2.3",
+    "mongoose": "^4.13.9",
     "python-shell": "^0.4.0"
   }
 }

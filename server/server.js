@@ -7,12 +7,16 @@ const keys = require('./keys.json')
 const verifier = require('google-id-token-verifier')
 
 const util = require('./util/util.js')
+const db = require('./db.js')
 
 app.use(express.static(__dirname + '/static'))
 app.use(bodyParser.json())
 
 //util
 var emails = util.getAuthorizedEmails()
+
+//mongoDB
+
 
 //announcement view
 app.get('/',function(req,res) {

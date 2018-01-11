@@ -11,7 +11,8 @@ module.exports = {
 
             console.log("Authorized emails:")
             for(let i = 0; i < emails.length; i++) {
-                console.log(emails[i])
+                //On windows each email ends with \r (carriage return) requiring it to be filtered out otherwise matching doesn't work
+                //console.log(emails[i])
             }
              emails.push('benkosten@gmail.com')
         })
