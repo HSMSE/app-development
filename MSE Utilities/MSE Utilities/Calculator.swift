@@ -9,7 +9,7 @@
 import UIKit
 
 class Calculator: UIViewController {
-
+    
     @IBOutlet weak var display: UILabel!
     var operation = 0
     var firstInput = 0.0
@@ -39,7 +39,9 @@ class Calculator: UIViewController {
             }
             break
         case 18:
-            display.text = String(Double(display.text!)! * -1)
+            if(display.text != "") {
+                display.text = String(Double(display.text!)! * -1)
+            }
             break
         case 19:
             if(operation != 0) {
@@ -58,7 +60,7 @@ class Calculator: UIViewController {
             break
         }
     }
-   
+    
     func operate()->Double {
         switch operation {
         case 11:
@@ -68,7 +70,10 @@ class Calculator: UIViewController {
         case 13:
             return firstInput*secondInput
         case 14:
-            return firstInput/secondInput
+            if(secondInput != 0.0) {
+                return firstInput/secondInput
+            }
+            return Double.nan
         case 15:
             return pow(firstInput, secondInput)
         case 20:
@@ -83,27 +88,28 @@ class Calculator: UIViewController {
             return 0
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
+
