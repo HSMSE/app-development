@@ -10,20 +10,26 @@ import UIKit
 
 class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var subjects = ["XC Team Makes States", "School Closed Monday", "Seniors Turn In Financial Aid!"]
+    var announcements = ["The cross country team made states with 4th place last week. Seniors Abe Drogin and Michael Moriarty both broke school records.",
+                         "School will be closed on Monday due to Martin Luther King Jr. Day.",
+                         "Seniors! You must turn in your financial aid requests ASAP!"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let myTableView = UITableView(frame: self.view.bounds, style: UITableViewStyle.plain)
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        myTableView.backgroundColor = UIColor.white
+        myTableView.backgroundColor = UIColor.gray
         myTableView.frame = CGRect(origin: CGPoint(x: 20, y: 50), size: self.view.frame.size)
 
         myTableView.register(UINib(nibName: "DateCell", bundle: nil), forCellReuseIdentifier: "dateCell")
         myTableView.register(UINib(nibName: "TestCell", bundle: nil), forCellReuseIdentifier: "testCell")
         
         self.view.addSubview(myTableView)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,16 +37,45 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2 //equal to amount of events
+    func getAnnouncementsFromDate(_ date: Date) {
+        //GET request to server
+        
+        /*
+        let sampleAnnouncement:String = "{32187415612897: }"
+        */
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4 //equal to amount of rows
+    }
+    
+    //Set cells to expand after any of them are tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row >= 0 {
+            var cell = tableView.cellForRow(at: indexPath) as! BaseCell
+            cell.isCollapsed = !cell.isCollapsed
+
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
+    
+    //Decides height (changes for expansion)
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch(indexPath.row) {
         case 0:
-            return 217
-            
+            if let cell = tableView.cellForRow(at: indexPath) as! BaseCell? {
+                if (!cell.isCollapsed) {
+                    return 217
+                }
+            }
+            return 50
         default:
+            if let cell = tableView.cellForRow(at: indexPath) as! BaseCell? {
+                if (!cell.isCollapsed) {
+                    return 100
+                }
+            }
             return 50
         }
     }
@@ -52,16 +87,10 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
             
             myCell.dateLabel.text = "some date"
             return myCell
-            
-        case 1:
-            let myCell = tableView.dequeueReusableCell(withIdentifier: "testCell") as! TestCell
-            
-            myCell.testLabel.text = "some subject"
-            return myCell
-            
         default:
-            //Blank cell, should never occur
             let myCell = tableView.dequeueReusableCell(withIdentifier: "testCell") as! TestCell
+            
+            myCell.testLabel.text = subjects[indexPath.row - 1]
             return myCell
         }
     }

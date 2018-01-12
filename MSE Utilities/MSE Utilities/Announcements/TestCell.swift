@@ -8,18 +8,21 @@
 
 import UIKit
 
-class TestCell: UITableViewCell {
+class TestCell: UITableViewCell, BaseCell {
     
-
+    var isCollapsed: Bool = true
+    
     @IBOutlet weak var testLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
+        /*
         //Create tap recognize
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.tapFunction(_:)))
         testLabel.addGestureRecognizer(tap)
+        */
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,9 +31,14 @@ class TestCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    //what to do if tapped
-    @objc func tapFunction(_ sender: UITapGestureRecognizer) {
-        print("tap working")
+    func changeLabel(words: String) {
+        testLabel.text = words
     }
     
+    //what to do if tapped
+    /*
+    @objc func tapFunction(_ sender: UITapGestureRecognizer) {
+        
+    }
+    */
 }

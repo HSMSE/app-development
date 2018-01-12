@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="217" id="KGk-i7-Jjw" customClass="DateCell" customModule="MSE_Utilities" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DateCell" customModule="MSE_Utilities" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="347" height="217"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -48,6 +48,7 @@
                     <constraint firstItem="EZO-dQ-JkU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sFB-aK-Lwk"/>
                 </constraints>
             </tableViewCellContentView>
+            <gestureRecognizers/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="rZZ-Yw-zks" id="r4M-YF-ZeI"/>

@@ -8,25 +8,28 @@
 
 import UIKit
 
-class DateCell: UITableViewCell {
+class DateCell: UITableViewCell, BaseCell{
+    
+    var isCollapsed: Bool = true {
+        didSet {
+            if (isCollapsed) {
+                datePicker.isHidden = true
+            } else {
+                datePicker.isHidden = false
+            }
+        }
+    }
 
-    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    var datePickerVisible: Bool!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        datePicker.isHidden = true
     }
-    
-    func showDatePickerCell() {
-        
-    }
-    
-    func hideDatePickerCell() {
-        
-    }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
