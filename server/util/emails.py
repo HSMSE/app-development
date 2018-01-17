@@ -1,13 +1,4 @@
 from bs4 import BeautifulSoup
 import requests
-import sys
 
-url = 'http://www.hsmse.org/faculty/faculty-contact-information/'
-html = requests.get(url).text
-soup = BeautifulSoup(html, 'html.parser')
-
-soup = soup.find(id="col1")
-
-a = []
-for link in soup.find_all('a'):
-    print(link.text.strip().lower())
+for link in BeautifulSoup(requests.get('http://www.hsmse.org/faculty/faculty-contact-information/').text, 'html.parser').find(id="col1").find_all('a'): print(link.text.strip().lower())
