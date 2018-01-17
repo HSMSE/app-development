@@ -10,8 +10,8 @@
 		2436218F1FFC11AD00B8A75A /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2436218D1FFC11AD00B8A75A /* DateCell.swift */; };
 		243621901FFC11AD00B8A75A /* DateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2436218E1FFC11AD00B8A75A /* DateCell.xib */; };
 		2485F2092009454700612C9B /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2485F2082009454700612C9B /* BaseCell.swift */; };
-		24B38EA71FFD67E80024CBA5 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B38EA51FFD67E80024CBA5 /* TestCell.swift */; };
-		24B38EA81FFD67E80024CBA5 /* TestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24B38EA61FFD67E80024CBA5 /* TestCell.xib */; };
+		24E8573B200FD8C500D0A568 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85739200FD8C500D0A568 /* TextCell.swift */; };
+		24E8573C200FD8C500D0A568 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24E8573A200FD8C500D0A568 /* TextCell.xib */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
 		BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD341F9FB53900A02A02 /* ViewController.swift */; };
 		BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2AFD361F9FB53900A02A02 /* Main.storyboard */; };
@@ -48,8 +48,8 @@
 		2436218D1FFC11AD00B8A75A /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		2436218E1FFC11AD00B8A75A /* DateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCell.xib; sourceTree = "<group>"; };
 		2485F2082009454700612C9B /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
-		24B38EA51FFD67E80024CBA5 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
-		24B38EA61FFD67E80024CBA5 /* TestCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCell.xib; sourceTree = "<group>"; };
+		24E85739200FD8C500D0A568 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		24E8573A200FD8C500D0A568 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2AFD341F9FB53900A02A02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,9 +102,9 @@
 				BF2AFD681F9FBD8B00A02A02 /* Announcements.swift */,
 				BF2AFD691F9FBD8B00A02A02 /* Announcements.xib */,
 				2436218D1FFC11AD00B8A75A /* DateCell.swift */,
+				24E85739200FD8C500D0A568 /* TextCell.swift */,
+				24E8573A200FD8C500D0A568 /* TextCell.xib */,
 				2436218E1FFC11AD00B8A75A /* DateCell.xib */,
-				24B38EA51FFD67E80024CBA5 /* TestCell.swift */,
-				24B38EA61FFD67E80024CBA5 /* TestCell.xib */,
 				2485F2082009454700612C9B /* BaseCell.swift */,
 			);
 			path = Announcements;
@@ -278,7 +278,7 @@
 				BF2AFD751F9FBDE200A02A02 /* Calendar.xib in Resources */,
 				BF2AFD3D1F9FB53900A02A02 /* LaunchScreen.storyboard in Resources */,
 				BF2AFD3A1F9FB53900A02A02 /* Assets.xcassets in Resources */,
-				24B38EA81FFD67E80024CBA5 /* TestCell.xib in Resources */,
+				24E8573C200FD8C500D0A568 /* TextCell.xib in Resources */,
 				BF2AFD6F1F9FBDA200A02A02 /* Calculator.xib in Resources */,
 				BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */,
 			);
@@ -305,10 +305,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B38EA71FFD67E80024CBA5 /* TestCell.swift in Sources */,
 				BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */,
 				2436218F1FFC11AD00B8A75A /* DateCell.swift in Sources */,
 				BF2AFD6E1F9FBDA200A02A02 /* Calculator.swift in Sources */,
+				24E8573B200FD8C500D0A568 /* TextCell.swift in Sources */,
 				BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */,
 				BF2AFD6A1F9FBD8B00A02A02 /* Announcements.swift in Sources */,
 				BF2AFD741F9FBDE200A02A02 /* Calendar.swift in Sources */,

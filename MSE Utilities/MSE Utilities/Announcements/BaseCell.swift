@@ -10,4 +10,5 @@ import UIKit
 
 protocol BaseCell {
     var isCollapsed:Bool {get set}
+    var requiredHeight:CGFloat {get set}
 }

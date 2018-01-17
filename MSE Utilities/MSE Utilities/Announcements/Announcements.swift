@@ -26,7 +26,7 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
         myTableView.frame = CGRect(origin: CGPoint(x: 20, y: 50), size: self.view.frame.size)
 
         myTableView.register(UINib(nibName: "DateCell", bundle: nil), forCellReuseIdentifier: "dateCell")
-        myTableView.register(UINib(nibName: "TestCell", bundle: nil), forCellReuseIdentifier: "testCell")
+        myTableView.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "textCell")
         
         self.view.addSubview(myTableView)
         
@@ -62,22 +62,12 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     //Decides height (changes for expansion)
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch(indexPath.row) {
-        case 0:
-            if let cell = tableView.cellForRow(at: indexPath) as! BaseCell? {
-                if (!cell.isCollapsed) {
-                    return 217
-                }
+        if let cell = tableView.cellForRow(at: indexPath) as! BaseCell? {
+            if cell.requiredHeight != 0 {
+                return cell.requiredHeight
             }
-            return 50
-        default:
-            if let cell = tableView.cellForRow(at: indexPath) as! BaseCell? {
-                if (!cell.isCollapsed) {
-                    return 100
-                }
-            }
-            return 50
         }
+        return 40
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -88,9 +78,10 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
             myCell.dateLabel.text = "some date"
             return myCell
         default:
-            let myCell = tableView.dequeueReusableCell(withIdentifier: "testCell") as! TestCell
+            let myCell = tableView.dequeueReusableCell(withIdentifier: "textCell") as! TextCell
             
-            myCell.testLabel.text = subjects[indexPath.row - 1]
+            myCell.subjectLabel.text = subjects[indexPath.row - 1]
+            myCell.contentLabel.text = announcements[indexPath.row - 1]
             return myCell
         }
     }

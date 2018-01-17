@@ -1,21 +1,21 @@
 //
-//  DateCell.swift
+//  TextCell.swift
 //  MSE Utilities
 //
-//  Created by Temp on 1/2/18.
+//  Created by Temp on 1/17/18.
 //  Copyright © 2018 HSMSE. All rights reserved.
 //
 
 import UIKit
 
-class DateCell: UITableViewCell, BaseCell{
+class TextCell: UITableViewCell, BaseCell {
     
     var isCollapsed: Bool = true {
         didSet {
             if (isCollapsed) {
-                datePicker.isHidden = true
+                contentLabel.isHidden = true
             } else {
-                datePicker.isHidden = false
+                contentLabel.isHidden = false
             }
             
             //update requiredHeight
@@ -29,17 +29,16 @@ class DateCell: UITableViewCell, BaseCell{
         }
     }
     
-    var requiredHeight:CGFloat = 0
-
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
+    var requiredHeight: CGFloat = 0
+    
+    @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        datePicker.isHidden = true
+        // Initialization code
+        contentLabel.isHidden = true
     }
-
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
