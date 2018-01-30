@@ -25,7 +25,6 @@ class TextCell: UITableViewCell, BaseCell {
                     requiredHeight += subview.frame.size.height
                 }
             }
-            
         }
     }
     

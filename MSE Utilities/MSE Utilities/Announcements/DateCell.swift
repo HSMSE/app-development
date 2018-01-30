@@ -8,41 +8,29 @@
 
 import UIKit
 
-class DateCell: UITableViewCell, BaseCell{
+class DateCell: UITableViewCell, BaseCell {
     
-    var isCollapsed: Bool = true {
-        didSet {
-            if (isCollapsed) {
-                datePicker.isHidden = true
-            } else {
-                datePicker.isHidden = false
-            }
-            
-            //update requiredHeight
-            requiredHeight = 0
-            for subview in contentView.subviews {
-                if !subview.isHidden {
-                    requiredHeight += subview.frame.size.height
-                }
-            }
-            
-        }
-    }
+    var isCollapsed: Bool = true
     
-    var requiredHeight:CGFloat = 0
+    var requiredHeight:CGFloat = 40
 
     @IBOutlet var dateLabel: UILabel!
-    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        datePicker.isHidden = true
+        //set dateLabel to current date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, yyyy"
+        
+        let date = Date()
+        dateLabel.text = dateFormatter.string(from: date)
+
     }
 
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        //super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }

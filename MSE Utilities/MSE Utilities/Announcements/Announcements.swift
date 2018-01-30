@@ -51,7 +51,15 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     //Set cells to expand after any of them are tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row >= 0 {
+        if indexPath.row == 0 {
+            let mainView = self.parent as! ViewController;
+            
+            let offset: CGPoint = CGPoint(x: mainView.view.frame.width * 2, y: 0)
+            
+            mainView.horizontalScrollView.setContentOffset(offset, animated: true)
+            
+        }
+        if indexPath.row > 0 {
             var cell = tableView.cellForRow(at: indexPath) as! BaseCell
             cell.isCollapsed = !cell.isCollapsed
 
@@ -75,7 +83,6 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
         case 0:
             let myCell = tableView.dequeueReusableCell(withIdentifier: "dateCell") as! DateCell
             
-            myCell.dateLabel.text = "some date"
             return myCell
         default:
             let myCell = tableView.dequeueReusableCell(withIdentifier: "textCell") as! TextCell
