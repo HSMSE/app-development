@@ -12,25 +12,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DateCell" customModule="MSE_Utilities" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="219.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EZO-dQ-JkU">
-                        <rect key="frame" x="0.0" y="40" width="320" height="165"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="165" id="vMN-R9-R4B"/>
-                        </constraints>
-                        <date key="date" timeIntervalSinceReferenceDate="536613705.41645998">
-                            <!--2018-01-02 19:21:45 +0000-->
-                        </date>
-                        <date key="minimumDate" timeIntervalSinceReferenceDate="504961200">
-                            <!--2017-01-01 11:00:00 +0000-->
-                        </date>
-                        <locale key="locale" localeIdentifier="en_US"/>
-                    </datePicker>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MMMMd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZZ-Yw-zks">
                         <rect key="frame" x="126" y="0.0" width="68" height="40"/>
                         <constraints>
@@ -42,17 +29,14 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="EZO-dQ-JkU" firstAttribute="top" secondItem="rZZ-Yw-zks" secondAttribute="bottom" id="0Ox-a8-Fvy"/>
                     <constraint firstItem="rZZ-Yw-zks" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7hm-4H-xLE"/>
                     <constraint firstItem="rZZ-Yw-zks" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="mP0-3F-Y6H"/>
-                    <constraint firstItem="EZO-dQ-JkU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="sFB-aK-Lwk"/>
                 </constraints>
             </tableViewCellContentView>
             <gestureRecognizers/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="rZZ-Yw-zks" id="r4M-YF-ZeI"/>
-                <outlet property="datePicker" destination="EZO-dQ-JkU" id="hKD-nY-U0I"/>
             </connections>
             <point key="canvasLocation" x="-198.5" y="139.5"/>
         </tableViewCell>
