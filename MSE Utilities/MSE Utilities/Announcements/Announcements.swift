@@ -24,7 +24,9 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         myTableView.backgroundColor = UIColor.gray
         myTableView.frame = CGRect(origin: CGPoint(x: 20, y: 50), size: self.view.frame.size)
-
+        
+        //myTableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+        
         myTableView.register(UINib(nibName: "DateCell", bundle: nil), forCellReuseIdentifier: "dateCell")
         myTableView.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "textCell")
         
