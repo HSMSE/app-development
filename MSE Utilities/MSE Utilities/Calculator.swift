@@ -17,9 +17,11 @@ class Calculator: UIViewController {
     @IBAction func numbers(_ sender: UIButton) {
         let input = sender.tag
         switch input {
+        // numbers 0-9
         case 0...9:
             display.text = display.text! + String(input)
             break
+        // subtraction, addition, multiplication, division, exponent
         case 11...15:
             if(!(display.text==""||display.text==".")) {
                 firstInput = Double(display.text!)!
@@ -27,22 +29,26 @@ class Calculator: UIViewController {
                 display.text = ""
             }
             break
+        // clear
         case 16:
             operation = 0
             firstInput = 0
             secondInput = 0
             display.text = ""
             break
+        // decimal
         case 17:
             if(!(display.text?.contains("."))!) {
                 display.text = display.text! + "."
             }
             break
+        // sign change
         case 18:
             if(display.text != "") {
                 display.text = String(Double(display.text!)! * -1)
             }
             break
+        // equals
         case 19:
             if(operation != 0) {
                 secondInput = Double(display.text!)!
@@ -50,6 +56,7 @@ class Calculator: UIViewController {
                 operation = 0
             }
             break
+        // trig functions - sin, cos, tan, log
         case 20...23:
             secondInput = 0
             operation = input

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad12_9" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -22,442 +22,442 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esY-U1-3no">
-                    <rect key="frame" x="0.0" y="405" width="257" height="192"/>
+                    <rect key="frame" x="0.0" y="304" width="193" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="C">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="9jd-j2-VI1"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWH-sN-Sar">
-                    <rect key="frame" x="0.0" y="597" width="257" height="195"/>
+                    <rect key="frame" x="0.0" y="448" width="193" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="7">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="TeW-sH-ta6"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfR-ef-Vxj">
-                    <rect key="frame" x="257" y="597" width="254" height="195"/>
+                    <rect key="frame" x="193" y="448" width="190" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="8">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="gHJ-uU-o97"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a12-j8-vsJ">
-                    <rect key="frame" x="0.0" y="792" width="257" height="190"/>
+                    <rect key="frame" x="0.0" y="594" width="193" height="142"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="4">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="BSa-fn-FV9"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQi-H2-lSp">
-                    <rect key="frame" x="511" y="792" width="256" height="190"/>
+                    <rect key="frame" x="383" y="594" width="192" height="142"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="6">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="SCK-xZ-s9S"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sM-M3-8xL">
-                    <rect key="frame" x="0.0" y="982" width="257" height="194"/>
+                    <rect key="frame" x="0.0" y="736" width="193" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="1">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="GVt-id-6Hn"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rig-zz-ui1">
-                    <rect key="frame" x="511" y="982" width="256" height="194"/>
+                    <rect key="frame" x="383" y="736" width="192" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="3">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="zJV-6B-xmS"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWd-D2-cCI">
-                    <rect key="frame" x="257" y="983" width="254" height="193"/>
+                    <rect key="frame" x="193" y="737" width="190" height="145"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="2">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="lGg-f0-Sum"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mno-1a-aeu">
-                    <rect key="frame" x="767" y="982" width="257" height="194"/>
+                    <rect key="frame" x="575" y="736" width="193" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="-">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="9L7-Mx-xlJ"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D8-lo-s8e">
-                    <rect key="frame" x="257" y="405" width="254" height="192"/>
+                    <rect key="frame" x="193" y="304" width="190" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="+/-">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="LLr-hw-lX2"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="las-qC-9mB">
-                    <rect key="frame" x="0.0" y="1171" width="517" height="195"/>
+                    <rect key="frame" x="0.0" y="878" width="388" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="0">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="IBW-BA-0k7"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7l-DU-rfY">
-                    <rect key="frame" x="511" y="1176" width="256" height="190"/>
+                    <rect key="frame" x="383" y="882" width="192" height="142"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title=".">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="qZ5-5p-evG"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdc-Pa-q1X">
-                    <rect key="frame" x="767" y="1176" width="257" height="190"/>
+                    <rect key="frame" x="575" y="882" width="193" height="142"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="=">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="07D-J0-ecw"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="20" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXd-w5-4ni" userLabel="sin">
-                    <rect key="frame" x="0.0" y="224" width="257" height="192"/>
+                    <rect key="frame" x="0.0" y="168" width="193" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.76079426240015124" green="0.76880262305699487" blue="0.76880262305699487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="sin">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="cWa-jO-3k6"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="21" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ja-4l-2Ha">
-                    <rect key="frame" x="257" y="224" width="254" height="192"/>
+                    <rect key="frame" x="193" y="168" width="190" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.76079426240015124" green="0.76880262305699487" blue="0.76880262305699487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <gestureRecognizers/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="cos">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="F85-5p-zC2"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n71-pK-sZl">
-                    <rect key="frame" x="511" y="405" width="256" height="192"/>
+                    <rect key="frame" x="383" y="304" width="192" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="^">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="sbY-GB-qdQ"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krs-8B-dp6">
-                    <rect key="frame" x="767" y="405" width="257" height="192"/>
+                    <rect key="frame" x="575" y="304" width="193" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="/">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="VDL-FF-Ibl"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-0V-79K">
-                    <rect key="frame" x="767" y="597" width="257" height="195"/>
+                    <rect key="frame" x="575" y="448" width="193" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="*">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="hSe-hl-9LJ"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="22" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51Q-Vt-i81">
-                    <rect key="frame" x="511" y="224" width="256" height="192"/>
+                    <rect key="frame" x="383" y="168" width="192" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.76079426240015124" green="0.76880262305699487" blue="0.76880262305699487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="tan">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="wsw-CR-zrr"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="23" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1o-EW-A00">
-                    <rect key="frame" x="767" y="224" width="257" height="192"/>
+                    <rect key="frame" x="575" y="168" width="193" height="144"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.76079426240015124" green="0.76880262305699487" blue="0.76880262305699487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="log">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="Rdv-3l-F77"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBD-56-XTK">
-                    <rect key="frame" x="511" y="597" width="256" height="195"/>
+                    <rect key="frame" x="383" y="448" width="192" height="146"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="9">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="fqP-gJ-uQd"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Js-Zx-Zio" userLabel="display">
-                    <rect key="frame" x="27" y="67" width="973" height="128"/>
+                    <rect key="frame" x="20" y="50" width="730" height="96"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
                     </variation>
                 </label>
                 <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX3-4C-hKR">
-                    <rect key="frame" x="767" y="792" width="257" height="190"/>
+                    <rect key="frame" x="575" y="594" width="193" height="142"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <state key="normal" title="+">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="osI-Y5-8nH"/>
                     </connections>
                 </button>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7X-mF-PhN">
-                    <rect key="frame" x="257" y="788" width="254" height="199"/>
+                    <rect key="frame" x="193" y="591" width="190" height="149"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="5">
                         <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <variation key="widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="35"/>
                     </variation>
                     <connections>
                         <action selector="numbers:" destination="-1" eventType="touchUpInside" id="sY2-KM-3fh"/>
