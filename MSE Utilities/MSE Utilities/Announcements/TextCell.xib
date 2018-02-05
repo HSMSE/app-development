@@ -24,12 +24,12 @@
                             <constraint firstAttribute="height" constant="40" id="Iqv-Tc-AqZ"/>
                             <constraint firstAttribute="width" constant="320" id="c6b-0W-WJP"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Content" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTO-iC-gtL">
-                        <rect key="frame" x="0.0" y="40" width="320" height="149"/>
+                        <rect key="frame" x="0.0" y="40" width="320" height="141"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="320" id="h5Z-k4-hc4"/>
                         </constraints>
@@ -38,6 +38,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="DTO-iC-gtL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Apn-AB-djU"/>
                     <constraint firstItem="DTO-iC-gtL" firstAttribute="top" secondItem="h3d-mZ-9W4" secondAttribute="bottom" id="JU8-Ue-8DY"/>
