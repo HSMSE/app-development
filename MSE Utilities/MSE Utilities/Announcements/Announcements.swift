@@ -26,7 +26,7 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
         myTableView.backgroundView = UIImageView(image: UIImage(named: "hsmse-logo.jpeg"))
         myTableView.frame = CGRect(origin: CGPoint(x: 20, y: 50), size: self.view.frame.size)
         
-        print(self.view.frame.size)
+        //print(self.view.frame.size)
         
         //myTableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         
