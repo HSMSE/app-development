@@ -7,7 +7,7 @@ const keys = require('./keys.json')
 const verifier = require('google-id-token-verifier')
 
 const util = require('./util/util.js')
-const db = require('./db.js')
+//const db = require('./db.js')
 
 app.use(express.static(__dirname + '/static'))
 app.use(bodyParser.json())
@@ -16,7 +16,6 @@ app.use(bodyParser.json())
 var emails = util.getAuthorizedEmails()
 
 //mongoDB
-
 
 //announcement view
 app.get('/',function(req,res) {
@@ -41,7 +40,7 @@ app.post('/g-signin', function(req, res) {
 
 //Api Routing
 app.get('/api/announcements', function(req, res) {
-    res.status(200).json('{timestamp: stuff}')
+    res.status(200).json({"timestamp": "stuff"})
 })
 
 // Starts the server.
