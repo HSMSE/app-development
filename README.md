@@ -10,3 +10,6 @@ student utility app
 
 ### Todo
 * Have an actual readme
+
+### Server
+* http://138.197.106.12:7777/app/v1.0/?task=announcements
