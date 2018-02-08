@@ -22,10 +22,9 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        myTableView.backgroundColor = UIColor.gray
+        myTableView.backgroundColor = UIColor.clear
+        myTableView.backgroundView = UIImageView(image: UIImage(named: "hsmse-logo.jpeg"))
         myTableView.frame = CGRect(origin: CGPoint(x: 20, y: 50), size: self.view.frame.size)
-        
-        //myTableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
         
         myTableView.register(UINib(nibName: "DateCell", bundle: nil), forCellReuseIdentifier: "dateCell")
         myTableView.register(UINib(nibName: "TextCell", bundle: nil), forCellReuseIdentifier: "textCell")
@@ -48,7 +47,7 @@ class Announcements: UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4 //equal to amount of rows
+        return announcements.count + 1 //num of announcements + date cell
     }
     
     //Set cells to expand after any of them are tapped

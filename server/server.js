@@ -6,17 +6,16 @@ const bodyParser = require('body-parser')
 const keys = require('./keys.json')
 const verifier = require('google-id-token-verifier')
 
-const util = require('./util/util.js')
-const db = require('./db.js')
+const utils = require('./utils/utils.js')
+//const db = require('./db.js')
 
 app.use(express.static(__dirname + '/static'))
 app.use(bodyParser.json())
 
 //util
-var emails = util.getAuthorizedEmails()
+var emails = utils.getAuthorizedEmails()
 
 //mongoDB
-
 
 //announcement view
 app.get('/',function(req,res) {
@@ -41,7 +40,7 @@ app.post('/g-signin', function(req, res) {
 
 //Api Routing
 app.get('/api/announcements', function(req, res) {
-    res.status(200).json('{timestamp: stuff}')
+    res.json(utils.getAnnouncements())
 })
 
 // Starts the server.
