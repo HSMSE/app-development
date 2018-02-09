@@ -40,7 +40,9 @@ app.post('/g-signin', function(req, res) {
 
 //Api Routing
 app.get('/api/announcements', function(req, res) {
-    res.json(utils.getAnnouncements())
+    utils.getAnnouncements(function(err, fileData) {
+        res.json(fileData)
+    })
 })
 
 // Starts the server.
