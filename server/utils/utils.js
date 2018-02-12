@@ -1,5 +1,5 @@
 const PythonShell = require('python-shell')
-const loadJsonFile = require('load-json-file');
+const jsonfile = require('jsonfile');
 
 //Utility file for various scripts
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
         return emails
     },
 
-    getAnnouncements: function() {
-        return loadJsonFile.sync('announcements.json')
+    getAnnouncements: function(callback) {
+        jsonfile.readFile('announcements.json', callback)
     }
 }
