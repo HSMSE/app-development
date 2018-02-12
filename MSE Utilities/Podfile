@@ -1,0 +1,4 @@
+target 'MSE Utilities' do
+  use_frameworks!
+  pod 'JTAppleCalendar', '~> 7.0'
+end

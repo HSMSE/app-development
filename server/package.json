@@ -1,0 +1,28 @@
+{
+  "name": "hsmse-app-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsmse/app-development.git"
+  },
+  "author": "Benjamin Kosten",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hsmse/app-development/issues"
+  },
+  "homepage": "https://github.com/hsmse/app-development#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "google-id-token-verifier": "^0.2.3",
+    "jsonfile": "^4.0.0",
+    "mongoose": "^4.13.9",
+    "pug": "^2.0.0-rc.4",
+    "python-shell": "^0.4.0"
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>HSMSE Announcements</title>
+        <meta name="author" content="Benjamin Kosten">
+
+        <!--css stuff-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--javascript stuff-->
+        <script src="assets/js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <!--google stuff-->
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="725466910946-rnsa530n8hjftk27p573d34g5acu63gr.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="nav-bar">
+            <h1>HSMSE Announcements</h1> <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+        </div>
+        <form action="submit.js">
+            <h3>Date</h3>
+            <input type="date" name="date">
+        </form>
+        <div>
+            <h3>Subject</h3>
+            <textarea rows="1" cols="64" required></textarea>
+        </div>
+        <div>
+            <h3>Body</h3>
+            <textarea rows="4" cols="64" required></textarea>
+            <div/><input type="submit">
+        </div>
+    </body>
+</html>
