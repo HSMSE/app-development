@@ -8,8 +8,5 @@ student utility app
 * [google-id-token-verifier](https://www.npmjs.com/package/google-id-token-verifier)
 * [python-shell](https://www.npmjs.com/package/python-shell)
 
-### Todo
-* Have an actual readme
-
 ### Server
 * http://138.197.106.12:7777/app/v1.0/?task=announcements
