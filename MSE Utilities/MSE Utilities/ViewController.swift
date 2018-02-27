@@ -10,7 +10,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var sections = [
+        Section(subject: "XC Team Wins States", text: "j fjdsa jfkl;dsa hflk;dsah l;sdaj flksadj flk;dsaj f;lksj ;laks j;sa ", expanded: false),
+        Section(subject: "Girls Soccer Team Wins Nothing", text: "asdf jkl;asdf jkl; rueiopwq kdalfj asdkl;f uweop dsaf dsa fdsaf dsa", expanded: false),
+        Section(subject: "Seniors Hand in Everything!!!", text: "qewr [poi qwer [pouewr ioepwruieowqpr ewioru eqwiorueqwio rueqwio", expanded: false)
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,4 +33,5 @@ class ViewController: UIViewController {
 
 
 }
+
 
