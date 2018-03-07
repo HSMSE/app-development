@@ -9,7 +9,17 @@
 import Foundation
 
 struct Section {
-    var subject: String
-    var text: String
+    var subject: String!
+    var text: String!
     var expanded: Bool!
+
+    init(subject: String, text: String) {
+        self.subject = subject
+        self.text = text
+        self.expanded = false
+    }
+    
+    func getText() -> String {
+        return text
+    }
 }
