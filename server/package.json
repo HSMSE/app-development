@@ -21,6 +21,7 @@
     "express": "^4.16.2",
     "google-id-token-verifier": "^0.2.3",
     "jsonfile": "^4.0.0",
+    "lowdb": "^1.0.0",
     "mongoose": "^4.13.9",
     "pug": "^2.0.0-rc.4",
     "python-shell": "^0.4.0"
