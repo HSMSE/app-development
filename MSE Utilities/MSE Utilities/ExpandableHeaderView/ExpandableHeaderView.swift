@@ -32,6 +32,8 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
     
     func customInit(title: String, section: Int, delegate: ExpandableHeaderViewDelegate) {
         self.textLabel?.text = title
+        self.textLabel?.lineBreakMode = .byWordWrapping
+        self.textLabel?.numberOfLines = 0
         self.section = section
         self.delegate = delegate
     }

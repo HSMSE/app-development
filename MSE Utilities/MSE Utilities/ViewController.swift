@@ -16,18 +16,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var sections = [
         Section(subject: "XC Team Wins States",
-                text: "They won"),
+                text: "They wo jld;ksaj fk;ldshlja jkhdsajkf sdjkh fdskj hdjskahflkjdsah fdjsak bmndsabvnsdbvnmds, bdahlkv dsakjvdlsk dja vjkadshvjdkavsmnbv mcnxbvmnc bvm,nc bvncbvasfdshljkfdsn"),
         Section(subject: "Girls Soccer Team Wins Nothing",
-                text: "They are not very good"),
+                text: "They are  fdsajhds dsm, bfdsanm, fbdsam,n fbdsam, fbkf gadkshfbeaskj fbdasmfdasm bfadkshb khads fkdhas f,hads bfm,ndas fm,das bfmndas b,dnsam, not very good"),
         Section(subject: "Seniors Hand in Everything!!!",
-                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwio rueqwio")
+                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
+        Section(subject: "Seniors Hand in Everything!!!",
+                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
+        Section(subject: "Seniors Hand in Everything!!!",
+                text: "qewr  fjksh flsdah fkjldsahfkjldsah kjlfdsh flkjdsh fkjlsadh fkjladsh fjkladsh fkjdlash fjkdsa hfkdjas hkldjs fhkldasg f;i7wafgblekwa felawykv hleaw fgieyaw gfkewag fuew gfljewah fkleajwb kdjs fbhasdj faehkw evwui gh4piut n4[poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
+        Section(subject: "Seniors Hand in Everything!!!",
+                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
+        Section(subject: "Seniors Hand in Everything!!!",
+                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
+        self.extendedLayoutIncludesOpaqueBars = true
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -49,7 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (sections[indexPath.section].expanded) {
-            return 44
+            return UITableViewAutomaticDimension
         } else {
             return 0
         }
@@ -65,19 +74,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return header
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
         cell.textLabel?.text = sections[indexPath.section].getText()
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        header.textLabel?.frame = header.frame
+    }
+  
     func toggleSection(header: ExpandableHeaderView, section: Int) {
         sections[section].expanded = !sections[section].expanded
-        
+
         tableView.beginUpdates()
+        
         tableView.reloadRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
+
         tableView.endUpdates()
+        
+        if (sections[section].expanded) {
+            tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: UITableViewScrollPosition.none, animated: true)
+        }
+        
     }
+    
+    
 }
-
-
