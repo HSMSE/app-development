@@ -11,7 +11,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     var sections = [
@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("load")
         self.extendedLayoutIncludesOpaqueBars = true
     }
     
@@ -99,8 +99,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if (sections[section].expanded) {
             tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: UITableViewScrollPosition.none, animated: true)
         }
-        
     }
-    
-    
 }
+
+
+
+
+
+

@@ -1,4 +1,6 @@
 target 'MSE Utilities' do
-  use_frameworks!
-  pod 'JTAppleCalendar', '~> 7.0'
+    source 'https://github.com/CocoaPods/Specs.git'
+    platform :ios, '11.2'
+    use_frameworks!
+    pod 'JTAppleCalendar', '~> 7.1.0'
 end

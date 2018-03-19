@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2403C7BF20600EBA009D8BBF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */; };
 		245392DE2045C74E0002D12E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392DD2045C74E0002D12E /* Section.swift */; };
 		245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392E02045C7F00002D12E /* ExpandableHeaderView.swift */; };
-		9E19EC6B3A8B20A52771134E /* Pods_MSE_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C495B6747591296B2530BF3B /* Pods_MSE_Utilities.framework */; };
+		247BCBB2205C447500793338 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BCBB1205C447500793338 /* CustomCell.swift */; };
+		95DD999988CDFD92602072C9 /* Pods_MSE_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
 		BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD341F9FB53900A02A02 /* ViewController.swift */; };
 		BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2AFD361F9FB53900A02A02 /* Main.storyboard */; };
@@ -38,8 +40,11 @@
 
 /* Begin PBXFileReference section */
 		1F3A3C70FFA09E7F901140AC /* Pods-MSE Utilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSE Utilities.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSE Utilities/Pods-MSE Utilities.release.xcconfig"; sourceTree = "<group>"; };
+		2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		245392DD2045C74E0002D12E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		245392E02045C7F00002D12E /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		247BCBB1205C447500793338 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSE_Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF2AFD341F9FB53900A02A02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +58,6 @@
 		BF2AFD4E1F9FB53900A02A02 /* MSE UtilitiesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MSE UtilitiesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD521F9FB53900A02A02 /* MSE_UtilitiesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSE_UtilitiesUITests.swift; sourceTree = "<group>"; };
 		BF2AFD541F9FB53900A02A02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C495B6747591296B2530BF3B /* Pods_MSE_Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSE_Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D56D99766A3267A91651E159 /* Pods-MSE Utilities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSE Utilities.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MSE Utilities/Pods-MSE Utilities.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E19EC6B3A8B20A52771134E /* Pods_MSE_Utilities.framework in Frameworks */,
+				95DD999988CDFD92602072C9 /* Pods_MSE_Utilities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +108,7 @@
 		BB174207B3F3D037F3BE37F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C495B6747591296B2530BF3B /* Pods_MSE_Utilities.framework */,
+				B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,11 +140,13 @@
 			children = (
 				245392DF2045C7AF0002D12E /* ExpandableHeaderView */,
 				BF2AFD341F9FB53900A02A02 /* ViewController.swift */,
+				2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */,
 				BF2AFD361F9FB53900A02A02 /* Main.storyboard */,
 				BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */,
 				BF2AFD391F9FB53900A02A02 /* Assets.xcassets */,
 				BF2AFD3B1F9FB53900A02A02 /* LaunchScreen.storyboard */,
 				BF2AFD3E1F9FB53900A02A02 /* Info.plist */,
+				247BCBB1205C447500793338 /* CustomCell.swift */,
 			);
 			path = "MSE Utilities";
 			sourceTree = "<group>";
@@ -354,8 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2403C7BF20600EBA009D8BBF /* CalendarViewController.swift in Sources */,
 				245392DE2045C74E0002D12E /* Section.swift in Sources */,
 				245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */,
+				247BCBB2205C447500793338 /* CustomCell.swift in Sources */,
 				BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */,
 				BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */,
 			);
