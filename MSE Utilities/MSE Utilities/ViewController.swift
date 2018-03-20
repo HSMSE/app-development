@@ -39,6 +39,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
+    @IBAction func toCalculator(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
+        self.present(nextViewController, animated:true, completion:nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
