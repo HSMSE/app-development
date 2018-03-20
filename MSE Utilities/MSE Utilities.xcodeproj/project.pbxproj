@@ -11,6 +11,7 @@
 		245392DE2045C74E0002D12E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392DD2045C74E0002D12E /* Section.swift */; };
 		245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392E02045C7F00002D12E /* ExpandableHeaderView.swift */; };
 		247BCBB2205C447500793338 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BCBB1205C447500793338 /* CustomCell.swift */; };
+		24F09D6720616DDC00FBDE10 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */; };
 		95DD999988CDFD92602072C9 /* Pods_MSE_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
 		BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD341F9FB53900A02A02 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		245392DD2045C74E0002D12E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		245392E02045C7F00002D12E /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		247BCBB1205C447500793338 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSE_Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,12 +143,13 @@
 				245392DF2045C7AF0002D12E /* ExpandableHeaderView */,
 				BF2AFD341F9FB53900A02A02 /* ViewController.swift */,
 				2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */,
+				247BCBB1205C447500793338 /* CustomCell.swift */,
+				24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */,
 				BF2AFD361F9FB53900A02A02 /* Main.storyboard */,
 				BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */,
 				BF2AFD391F9FB53900A02A02 /* Assets.xcassets */,
 				BF2AFD3B1F9FB53900A02A02 /* LaunchScreen.storyboard */,
 				BF2AFD3E1F9FB53900A02A02 /* Info.plist */,
-				247BCBB1205C447500793338 /* CustomCell.swift */,
 			);
 			path = "MSE Utilities";
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */,
 				247BCBB2205C447500793338 /* CustomCell.swift in Sources */,
 				BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */,
+				24F09D6720616DDC00FBDE10 /* CalculatorViewController.swift in Sources */,
 				BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

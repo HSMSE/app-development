@@ -31,9 +31,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio")
     ]
     
+    @IBAction func click(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calendarView")
+        self.present(nextViewController, animated:true, completion:nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("load")
+
         self.extendedLayoutIncludesOpaqueBars = true
     }
     
