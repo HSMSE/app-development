@@ -76,9 +76,9 @@
                                     <navigationItem title="Announcements" id="pJZ-et-Pua">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="99n-HB-MMG">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qx0-lT-jK5">
-                                                <rect key="frame" x="16" y="7" width="84" height="30"/>
+                                                <rect key="frame" x="16" y="7" width="31" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="&lt; Calculator"/>
+                                                <state key="normal" title="&lt; 🖩"/>
                                                 <connections>
                                                     <action selector="toCalculator:" destination="vwU-q2-37a" eventType="touchUpInside" id="WHs-IM-lCF"/>
                                                 </connections>
@@ -86,7 +86,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="zt0-er-3pF">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yOZ-7p-EbM">
-                                                <rect key="frame" x="303" y="0.0" width="56" height="44"/>
+                                                <rect key="frame" x="319" y="5" width="40" height="34"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" title="📅 &gt;"/>
