@@ -8,10 +8,15 @@ const db = low(adapter)
 //db setup
 db.defaults({announcements: []}).write()
 
-//utility file for various scripts
 module.exports = {
-    getAuthorizedEmails: function(callback) {
-        PythonShell.run('utils/emails.py', callback)
+    getAuthorizedEmails: function() {
+
+        var emails = PythonShell.run('utils/emails.py', function (err, results) {
+            if (err) throw err
+            results.push("benkosten@gmail.com")
+        })
+
+        return emails
     },
 
     getAnnouncements: function(amt, callback) {
