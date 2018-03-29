@@ -14,6 +14,7 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
+    @IBOutlet weak var selectedDate: UILabel!
     
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
@@ -37,6 +38,10 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
         calendarView.visibleDates { (visibleDates) in
             self.setupViewsOfCalendar(from: visibleDates)
         }
+        
+        //start on todays date
+        calendarView.scrollToDate(Date.init())
+        calendarView.selectDates([Date.init()])
     }
     
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState) {
@@ -114,6 +119,14 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
+        
+        selectDate(didSelectDate: date)
+    }
+    
+    //setting up the view under calendar
+    func selectDate(didSelectDate date: Date) {
+        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        selectedDate.text = formatter.string(from: date)
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
