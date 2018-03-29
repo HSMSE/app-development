@@ -11,6 +11,7 @@
 		245392DE2045C74E0002D12E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392DD2045C74E0002D12E /* Section.swift */; };
 		245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392E02045C7F00002D12E /* ExpandableHeaderView.swift */; };
 		247BCBB2205C447500793338 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247BCBB1205C447500793338 /* CustomCell.swift */; };
+		249F4D5220696FC400089F6E /* imageSwitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 249F4D5120696FC400089F6E /* imageSwitch.png */; };
 		24F09D6720616DDC00FBDE10 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */; };
 		95DD999988CDFD92602072C9 /* Pods_MSE_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		245392DD2045C74E0002D12E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		245392E02045C7F00002D12E /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		247BCBB1205C447500793338 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		249F4D5120696FC400089F6E /* imageSwitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageSwitch.png; sourceTree = "<group>"; };
 		24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSE_Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 		BF2AFD261F9FB53900A02A02 = {
 			isa = PBXGroup;
 			children = (
+				249F4D5120696FC400089F6E /* imageSwitch.png */,
 				BF2AFD311F9FB53900A02A02 /* MSE Utilities */,
 				BF2AFD461F9FB53900A02A02 /* MSE UtilitiesTests */,
 				BF2AFD511F9FB53900A02A02 /* MSE UtilitiesUITests */,
@@ -285,6 +288,7 @@
 				BF2AFD3D1F9FB53900A02A02 /* LaunchScreen.storyboard in Resources */,
 				BF2AFD3A1F9FB53900A02A02 /* Assets.xcassets in Resources */,
 				BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */,
+				249F4D5220696FC400089F6E /* imageSwitch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
