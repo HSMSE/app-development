@@ -1,7 +1,7 @@
 # app-development
 student utility app
 
-#EVERYTHING BELOW THIS IS OUT OF DATE
+# EVERYTHING BELOW THIS IS OUT OF DATE
 
 ### Dependencies
 * [node.js](https://nodejs.org/en/)
