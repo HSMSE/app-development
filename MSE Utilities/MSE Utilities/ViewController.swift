@@ -13,6 +13,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    let serverURL = "http://138.197.106.12:7777/app/v1.0/?task=announcements"
     
     var sections = [
         Section(subject: "XC Team Wins States",
@@ -39,7 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    
     @IBAction func toCalculator(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
@@ -54,11 +54,62 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.extendedLayoutIncludesOpaqueBars = true
     }
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /*
+    func getAnnouncementsFromDate(_ date: Date) {
+        let request = NSMutableURLRequest(url: URL(string: serverURL)!)
+        
+        request.httpMethod = "GET"
+        
+        //creating a task to send the post request
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            //exiting if there is some error
+            if error != nil{
+                print("error is \(String(describing: error))")
+                return;
+            }
+            
+            //parsing the response
+            do {
+                //converting response to NSDictionary
+                var announcementsJSON: NSDictionary!
+                announcementsJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                //getting the JSON array teams from the response
+                let dates: NSArray = announcementsJSON["dates"] as! NSArray
+                
+                //looping through all the json objects in the array teams
+                for i in 0 ..< dates.count{
+                    
+                    //getting the data at each index
+                    let teamID:Int = dates[i]["id"] as! Int!
+                    let teamName:String = dates[i]["name"] as! String!
+                    let teamMember:Int = dates[i]["member"] as! Int!
+                    
+                    //displaying the data
+                    print("id -> ", teamId)
+                    print("name -> ", teamName)
+                    print("member -> ", teamMember)
+                    print("===================")
+                    print("")
+                }
+            } catch {
+                print(error)
+            }
+        }
+        //executing the task
+        task.resume()
+    }
+    */
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count

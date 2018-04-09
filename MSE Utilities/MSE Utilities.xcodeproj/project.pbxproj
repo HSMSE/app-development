@@ -122,6 +122,7 @@
 		BF2AFD261F9FB53900A02A02 = {
 			isa = PBXGroup;
 			children = (
+				249F4D5120696FC400089F6E /* imageSwitch.png */,
 				BF2AFD311F9FB53900A02A02 /* MSE Utilities */,
 				BF2AFD461F9FB53900A02A02 /* MSE UtilitiesTests */,
 				BF2AFD511F9FB53900A02A02 /* MSE UtilitiesUITests */,
