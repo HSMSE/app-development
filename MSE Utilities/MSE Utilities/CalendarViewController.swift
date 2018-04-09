@@ -137,6 +137,14 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setupViewsOfCalendar(from: visibleDates)
     }
+    
+    //go to events
+    @IBAction func toAnnouncements(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
+        self.present(nextViewController, animated:true, completion:nil)
+    }
 }
 
 extension UIColor {

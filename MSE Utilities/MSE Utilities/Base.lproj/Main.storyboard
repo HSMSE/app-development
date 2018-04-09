@@ -28,7 +28,7 @@
         <!--View Controller-->
         <scene sceneID="fmy-ny-DBI">
             <objects>
-                <viewController id="vwU-q2-37a" customClass="ViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="announcementsView" id="vwU-q2-37a" customClass="ViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIC-m2-ypg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -279,10 +279,6 @@
                                     <constraint firstItem="zwd-UF-crF" firstAttribute="leading" secondItem="GmT-xz-3qG" secondAttribute="leading" id="yca-eS-u3R"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageSwitch.png" translatesAutoresizingMaskIntoConstraints="NO" id="EP6-E9-cdb">
-                                <rect key="frame" x="307" y="20" width="39" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SelectedDate" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nz-et-3fU">
                                 <rect key="frame" x="16" y="381" width="259" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -290,6 +286,14 @@
                                 <color key="textColor" red="0.99135226359999995" green="1" blue="0.9707648901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGp-MV-jCZ">
+                                <rect key="frame" x="16" y="404" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="to Announcements"/>
+                                <connections>
+                                    <action selector="toAnnouncements:" destination="bo8-GD-4EX" eventType="touchUpInside" id="W0W-rt-BUs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27058823529411763" green="0.20784313725490194" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -311,7 +315,4 @@
             <point key="canvasLocation" x="-95.200000000000003" y="-110.19490254872565"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imageSwitch.png" width="152" height="120"/>
-    </resources>
 </document>
