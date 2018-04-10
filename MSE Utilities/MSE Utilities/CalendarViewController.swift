@@ -16,6 +16,7 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var selectedDate: UILabel!
     
+    
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
@@ -127,6 +128,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func selectDate(didSelectDate date: Date) {
         formatter.dateFormat = "EEEE, MMMM dd, yyyy"
         selectedDate.text = formatter.string(from: date)
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
@@ -141,9 +143,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     //go to events
     @IBAction func toAnnouncements(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView") as! ViewController
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
         self.present(nextViewController, animated:true, completion:nil)
+        nextViewController.changeDateLabel(formatter.date(from: selectedDate.text!)!)
     }
 }
 

@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="KannadaSangamMN.ttc">
+            <string>KannadaSangamMN</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Calculator View Controller-->
         <scene sceneID="Vrj-h1-daz">
@@ -33,15 +38,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="yo" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-C6-i4d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="yo" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-C6-i4d">
                                 <rect key="frame" x="0.0" y="20" width="375" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="naD-2o-NQw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e6Y-pr-v7a">
-                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="106" width="375" height="561"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="5G7-le-fVD"/>
@@ -73,7 +80,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJV-yQ-uTE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Announcements" id="pJZ-et-Pua">
+                                    <navigationItem title="HSMSE Announcements" id="pJZ-et-Pua">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="99n-HB-MMG">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qx0-lT-jK5">
                                                 <rect key="frame" x="16" y="7" width="31" height="30"/>
@@ -98,17 +105,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuc-BV-ixs">
+                                <rect key="frame" x="166.5" y="71.5" width="43" height="27.5"/>
+                                <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" constant="49" id="1Zk-DL-sZN"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" constant="86" id="1Zk-DL-sZN"/>
+                            <constraint firstItem="yLo-C6-i4d" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="21Y-xt-bOG"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="bottom" secondItem="dtQ-5l-5HD" secondAttribute="bottom" id="4zj-8d-ccg"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="trailing" secondItem="e6Y-pr-v7a" secondAttribute="trailing" id="aCh-gR-2ZA"/>
+                            <constraint firstItem="yLo-C6-i4d" firstAttribute="top" secondItem="dJV-yQ-uTE" secondAttribute="top" id="aKb-Av-16G"/>
+                            <constraint firstItem="zuc-BV-ixs" firstAttribute="centerX" secondItem="yLo-C6-i4d" secondAttribute="centerX" id="bVm-cf-cd0"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="leading" secondItem="e6Y-pr-v7a" secondAttribute="leading" id="dgX-Ah-0Rm"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" id="hfd-PV-PBh"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" id="iP4-SS-bQ4"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="zuc-BV-ixs" secondAttribute="bottom" constant="7" id="q6x-jX-U2a"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="trailing" secondItem="dtQ-5l-5HD" secondAttribute="trailing" id="sxg-ma-7YL"/>
+                            <constraint firstItem="zuc-BV-ixs" firstAttribute="centerX" secondItem="XIC-m2-ypg" secondAttribute="centerX" id="ueN-hY-jwo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtQ-5l-5HD"/>
                         <connections>
@@ -116,6 +134,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="announcementsDateLabel" destination="zuc-BV-ixs" id="qJk-5k-edd"/>
                         <outlet property="tableView" destination="e6Y-pr-v7a" id="z5C-N2-IrZ"/>
                     </connections>
                 </viewController>
