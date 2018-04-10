@@ -22,7 +22,13 @@ class CalculatorViewController: UIViewController {
         let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
         WebView.loadHTMLString(html!, baseURL: nil)
         
-        //WebView.loadRequest(NSURLRequest(url: NSURL(fileURLWithPath:Bundle.main.path(forResource: "desmos.html", ofType: "html")!) as URL) as URLRequest)
+    }
+    
+    @IBAction func toAnnouncements(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
+        self.present(thirdViewController, animated:true, completion:nil)
     }
     
     override func didReceiveMemoryWarning() {
