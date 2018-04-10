@@ -18,6 +18,7 @@ const PythonShell = require('python-shell')
 /*
 PLEASE FIX THIS HORRIBLE CODE BELOWWWWW!!!!!!!!!!!!!!!!!!!!
 */
+//gets list of authorized user emails (teachers)
 var emails = []
 
 PythonShell.run('utils/emails.py', function (err, results) {
@@ -26,7 +27,7 @@ PythonShell.run('utils/emails.py', function (err, results) {
 
     console.log("Authorized emails:")
     for(let i = 0; i < emails.length; i++) {
-        emails[i] = emails[i].slice(0, emails[i].length - 1)
+        emails[i] = emails[i].slice(0, emails[i].length - 1) //Comment this line out on production server (windows specific)
         console.log(emails[i])
     }
     emails.push('benkosten@gmail.com')
@@ -51,6 +52,7 @@ function checkAuth(req, res, next) {
     }
 
     else {
+        //dont cache restricted pages
         res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
         next()
     }
