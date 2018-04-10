@@ -47,8 +47,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func toCalculator(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
-        self.present(nextViewController, animated:true, completion:nil)
+        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
+        self.present(thirdViewController, animated:true, completion:nil)
         
     }
     
