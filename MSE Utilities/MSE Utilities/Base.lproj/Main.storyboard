@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwU-q2-37a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwU-q2-37a">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,14 +29,16 @@
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9b-nK-DUs">
                                 <rect key="frame" x="246" y="12" width="148" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Announcements &gt;"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <state key="normal" title="Announcements ⟫">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="Mvo-Ho-g8n"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.89603156829999997" green="0.92488152010000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96520806347150256" green="0.96520806347150256" blue="0.96520806347150256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aJM-4K-L84" firstAttribute="trailing" secondItem="m9b-nK-DUs" secondAttribute="trailing" constant="20" id="8Bz-wO-3AQ"/>
                             <constraint firstItem="m9b-nK-DUs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E8u-1T-DNb" secondAttribute="leading" constant="20" symbolic="YES" id="8V0-hk-BFR"/>
@@ -106,10 +108,13 @@
                                     <navigationItem title="HSMSE Announcements" id="pJZ-et-Pua">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="99n-HB-MMG">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qx0-lT-jK5">
-                                                <rect key="frame" x="20" y="7" width="44" height="30"/>
+                                                <rect key="frame" x="20" y="5" width="44" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
-                                                <state key="normal" title="&lt; Calc"/>
+                                                <state key="normal" title="⟪ 📈">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="toCalculator:" destination="vwU-q2-37a" eventType="touchUpInside" id="WHs-IM-lCF"/>
                                                 </connections>
@@ -117,10 +122,12 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="zt0-er-3pF">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yOZ-7p-EbM">
-                                                <rect key="frame" x="354" y="5" width="40" height="34"/>
+                                                <rect key="frame" x="343" y="5" width="51" height="34"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="📅 &gt;"/>
+                                                <state key="normal" title="📅 ⟫">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="click:" destination="vwU-q2-37a" eventType="touchDown" id="mwk-8b-vwt"/>
                                                 </connections>
