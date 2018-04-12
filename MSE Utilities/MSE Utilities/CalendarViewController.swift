@@ -9,18 +9,16 @@
 import Foundation
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
+class CalendarViewController: UIViewController {
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var selectedDate: UILabel!
     
-    
     let outsideMonthColor = UIColor(colorWithHexValue: 0x584a66)
     let monthColor = UIColor.white
     let selectedMonthColor = UIColor(colorWithHexValue: 0x3a294b)
-    let currentDateSelectedViewColor = UIColor(colorWithHexValue: 0x4e3f5d)
     
     let formatter = DateFormatter()
     
@@ -29,6 +27,23 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
         
         setupCalendarView()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //to Announcements ViewController
+    @IBAction func toAnnouncements(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView") as! ViewController
+        
+        self.present(nextViewController, animated:true, completion:nil)
+        nextViewController.changeDateLabel(formatter.date(from: selectedDate.text!)!)
+    }
+    
+}
+
+extension CalendarViewController: JTAppleCalendarViewDataSource{
     
     func setupCalendarView() {
         //Set up calendar spacing
@@ -78,10 +93,6 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
         self.month.text = formatter.string(from: date)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
@@ -93,6 +104,7 @@ class CalendarViewController: UIViewController, JTAppleCalendarViewDataSource {
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
         return parameters
     }
+    
 }
 
 extension CalendarViewController: JTAppleCalendarViewDelegate {
@@ -140,14 +152,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
         setupViewsOfCalendar(from: visibleDates)
     }
     
-    //go to events
-    @IBAction func toAnnouncements(_ sender: UIButton) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView") as! ViewController
-        
-        self.present(nextViewController, animated:true, completion:nil)
-        nextViewController.changeDateLabel(formatter.date(from: selectedDate.text!)!)
-    }
 }
 
 extension UIColor {

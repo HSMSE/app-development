@@ -10,7 +10,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var announcementsDateLabel: UILabel!
@@ -36,6 +36,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio")
     ]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.extendedLayoutIncludesOpaqueBars = true
+        
+        changeDateLabel(Date.init())
+    }
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     @IBAction func click(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
@@ -52,26 +65,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.extendedLayoutIncludesOpaqueBars = true
-        
-        
-        changeDateLabel(Date.init())
-    }
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func changeDateLabel(_ date: Date) {
         formatter.dateFormat = "EEEE, MMMM dd, yyyy"
         announcementsDateLabel.text = formatter.string(from: date)
     }
     
     /*
+     TO BE IMPLEMENTED
+     
     func getAnnouncementsFromDate(_ date: Date) {
         let request = NSMutableURLRequest(url: URL(string: serverURL)!)
         
@@ -121,14 +122,32 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         task.resume()
     }
     */
+}
+
+extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
+        cell.textLabel?.text = sections[indexPath.section].getText()
+        return cell
+    }
+    
+}
+
+extension ViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = ExpandableHeaderView()
+        header.customInit(title: sections[section].subject, section: section, delegate: self)
+        return header
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -147,36 +166,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 2
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = ExpandableHeaderView()
-        header.customInit(title: sections[section].subject, section: section, delegate: self)
-        return header
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        cell.textLabel?.text = sections[indexPath.section].getText()
-        return cell
-    }
-    
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         header.textLabel?.frame = header.frame
     }
-  
+}
+
+extension ViewController: ExpandableHeaderViewDelegate {
+    
     func toggleSection(header: ExpandableHeaderView, section: Int) {
         sections[section].expanded = !sections[section].expanded
-
+        
         tableView.beginUpdates()
         
         tableView.reloadRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
-
+        
         tableView.endUpdates()
         
         if (sections[section].expanded) {
             tableView.scrollToRow(at: IndexPath(row: 0, section: section), at: UITableViewScrollPosition.none, animated: true)
         }
     }
+    
 }
