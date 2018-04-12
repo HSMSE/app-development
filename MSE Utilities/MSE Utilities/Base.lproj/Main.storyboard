@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwU-q2-37a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwU-q2-37a">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,6 +39,7 @@
                         <color key="backgroundColor" red="0.89603156829999997" green="0.92488152010000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="aJM-4K-L84" firstAttribute="trailing" secondItem="m9b-nK-DUs" secondAttribute="trailing" constant="20" id="8Bz-wO-3AQ"/>
+                            <constraint firstItem="m9b-nK-DUs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E8u-1T-DNb" secondAttribute="leading" constant="20" symbolic="YES" id="8V0-hk-BFR"/>
                             <constraint firstItem="8NS-5G-Sc8" firstAttribute="top" secondItem="aJM-4K-L84" secondAttribute="top" constant="30" id="8WU-un-y67"/>
                             <constraint firstItem="8NS-5G-Sc8" firstAttribute="width" secondItem="aJM-4K-L84" secondAttribute="width" id="V0z-vJ-iCS"/>
                             <constraint firstItem="aJM-4K-L84" firstAttribute="bottom" secondItem="8NS-5G-Sc8" secondAttribute="bottom" id="Zbb-5I-BFM"/>
@@ -64,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="yo" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-C6-i4d">
-                                <rect key="frame" x="0.0" y="20" width="375" height="41"/>
+                                <rect key="frame" x="0.0" y="20" width="413" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="naD-2o-NQw"/>
                                 </constraints>
@@ -73,11 +74,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e6Y-pr-v7a">
-                                <rect key="frame" x="0.0" y="69" width="414" height="667"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="630"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="5G7-le-fVD"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="labelCell" textLabel="fpz-pl-aUQ" style="IBUITableViewCellStyleDefault" id="V6d-qn-buX">
                                         <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="44"/>
@@ -132,7 +130,7 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuc-BV-ixs">
-                                <rect key="frame" x="166.5" y="71.5" width="43" height="27.5"/>
+                                <rect key="frame" x="185.66666666666666" y="71.666666666666671" width="43" height="27.333333333333329"/>
                                 <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
