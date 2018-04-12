@@ -13,6 +13,10 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var announcementsDateLabel: UILabel!
+    
+    let formatter = DateFormatter()
+    
     let serverURL = "http://138.197.106.12:7777/app/v1.0/?task=announcements"
     
     var sections = [
@@ -50,14 +54,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.extendedLayoutIncludesOpaqueBars = true
+        
+        
+        changeDateLabel(Date.init())
     }
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func changeDateLabel(_ date: Date) {
+        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        announcementsDateLabel.text = formatter.string(from: date)
     }
     
     /*
@@ -169,9 +180,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
 }
-
-
-
-
-
-
