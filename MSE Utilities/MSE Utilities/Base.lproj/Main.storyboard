@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwU-q2-37a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwU-q2-37a">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="KannadaSangamMN.ttc">
-            <string>KannadaSangamMN</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Calculator View Controller-->
         <scene sceneID="Vrj-h1-daz">
@@ -24,29 +19,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NS-5G-Sc8">
-                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9b-nK-DUs">
-                                <rect key="frame" x="246" y="12" width="148" height="34"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <state key="normal" title="Announcements ⟫">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="Mvo-Ho-g8n"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-h5-Yr4">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hkm-YG-5nM"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Graphing Calculator" id="SGV-af-2LI">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="9ET-sg-FcV">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5AD-tE-aeE">
+                                                <rect key="frame" x="343" y="5" width="51" height="34"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="📅 ⟫">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="yHQ-b3-s6d"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.96520806347150256" green="0.96520806347150256" blue="0.96520806347150256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aJM-4K-L84" firstAttribute="trailing" secondItem="m9b-nK-DUs" secondAttribute="trailing" constant="20" id="8Bz-wO-3AQ"/>
-                            <constraint firstItem="m9b-nK-DUs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E8u-1T-DNb" secondAttribute="leading" constant="20" symbolic="YES" id="8V0-hk-BFR"/>
-                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="top" secondItem="aJM-4K-L84" secondAttribute="top" constant="30" id="8WU-un-y67"/>
-                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="width" secondItem="aJM-4K-L84" secondAttribute="width" id="V0z-vJ-iCS"/>
-                            <constraint firstItem="aJM-4K-L84" firstAttribute="bottom" secondItem="8NS-5G-Sc8" secondAttribute="bottom" id="Zbb-5I-BFM"/>
-                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="centerX" secondItem="aJM-4K-L84" secondAttribute="centerX" id="eh4-T1-kf9"/>
-                            <constraint firstItem="m9b-nK-DUs" firstAttribute="top" secondItem="E8u-1T-DNb" secondAttribute="top" constant="12" id="f3r-nN-1mM"/>
+                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="bottom" secondItem="aJM-4K-L84" secondAttribute="bottom" id="Bx6-CQ-u1O"/>
+                            <constraint firstItem="RE7-h5-Yr4" firstAttribute="leading" secondItem="aJM-4K-L84" secondAttribute="leading" id="DPW-MS-Nem"/>
+                            <constraint firstItem="RE7-h5-Yr4" firstAttribute="trailing" secondItem="aJM-4K-L84" secondAttribute="trailing" id="J2E-hC-JEW"/>
+                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="top" secondItem="RE7-h5-Yr4" secondAttribute="bottom" id="TKM-WN-4W0"/>
+                            <constraint firstItem="RE7-h5-Yr4" firstAttribute="top" secondItem="aJM-4K-L84" secondAttribute="top" id="mEQ-0N-MFN"/>
+                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="trailing" secondItem="aJM-4K-L84" secondAttribute="trailing" id="uQx-fg-Osz"/>
+                            <constraint firstItem="8NS-5G-Sc8" firstAttribute="leading" secondItem="aJM-4K-L84" secondAttribute="leading" id="zKH-Tx-kUd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aJM-4K-L84"/>
                     </view>
@@ -67,9 +75,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="yo" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-C6-i4d">
-                                <rect key="frame" x="0.0" y="20" width="413" height="41"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="naD-2o-NQw"/>
+                                    <constraint firstAttribute="height" constant="44" id="naD-2o-NQw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -104,6 +112,9 @@
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJV-yQ-uTE">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EHg-DG-bHy"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="HSMSE Announcements" id="pJZ-et-Pua">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="99n-HB-MMG">
@@ -129,35 +140,27 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="click:" destination="vwU-q2-37a" eventType="touchDown" id="mwk-8b-vwt"/>
+                                                    <action selector="toCalendar:" destination="vwU-q2-37a" eventType="touchUpInside" id="1ay-Ho-C0T"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuc-BV-ixs">
-                                <rect key="frame" x="185.66666666666666" y="71.666666666666671" width="43" height="27.333333333333329"/>
-                                <fontDescription key="fontDescription" name="KannadaSangamMN" family="Kannada Sangam MN" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" constant="86" id="1Zk-DL-sZN"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="yLo-C6-i4d" secondAttribute="bottom" constant="-2" id="1Zk-DL-sZN"/>
                             <constraint firstItem="yLo-C6-i4d" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="21Y-xt-bOG"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="bottom" secondItem="dtQ-5l-5HD" secondAttribute="bottom" id="4zj-8d-ccg"/>
-                            <constraint firstItem="dJV-yQ-uTE" firstAttribute="trailing" secondItem="e6Y-pr-v7a" secondAttribute="trailing" id="aCh-gR-2ZA"/>
-                            <constraint firstItem="yLo-C6-i4d" firstAttribute="top" secondItem="dJV-yQ-uTE" secondAttribute="top" id="aKb-Av-16G"/>
-                            <constraint firstItem="zuc-BV-ixs" firstAttribute="centerX" secondItem="yLo-C6-i4d" secondAttribute="centerX" id="bVm-cf-cd0"/>
-                            <constraint firstItem="dJV-yQ-uTE" firstAttribute="leading" secondItem="e6Y-pr-v7a" secondAttribute="leading" id="dgX-Ah-0Rm"/>
+                            <constraint firstItem="dJV-yQ-uTE" firstAttribute="trailing" secondItem="dtQ-5l-5HD" secondAttribute="trailing" id="aCh-gR-2ZA"/>
+                            <constraint firstItem="yLo-C6-i4d" firstAttribute="top" secondItem="dJV-yQ-uTE" secondAttribute="bottom" id="aKb-Av-16G"/>
+                            <constraint firstItem="dJV-yQ-uTE" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" id="dgX-Ah-0Rm"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" id="hfd-PV-PBh"/>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" id="iP4-SS-bQ4"/>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="zuc-BV-ixs" secondAttribute="bottom" constant="7" id="q6x-jX-U2a"/>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="trailing" secondItem="dtQ-5l-5HD" secondAttribute="trailing" id="sxg-ma-7YL"/>
-                            <constraint firstItem="zuc-BV-ixs" firstAttribute="centerX" secondItem="XIC-m2-ypg" secondAttribute="centerX" id="ueN-hY-jwo"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="iP4-SS-bQ4"/>
+                            <constraint firstItem="yLo-C6-i4d" firstAttribute="trailing" secondItem="dJV-yQ-uTE" secondAttribute="trailing" id="pOK-CK-uIR"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="trailing" secondItem="dJV-yQ-uTE" secondAttribute="trailing" id="sxg-ma-7YL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtQ-5l-5HD"/>
                         <connections>
@@ -165,7 +168,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="announcementsDateLabel" destination="zuc-BV-ixs" id="qJk-5k-edd"/>
+                        <outlet property="announcementsDateLabel" destination="yLo-C6-i4d" id="Awv-6D-Dyq"/>
                         <outlet property="tableView" destination="e6Y-pr-v7a" id="z5C-N2-IrZ"/>
                     </connections>
                 </viewController>

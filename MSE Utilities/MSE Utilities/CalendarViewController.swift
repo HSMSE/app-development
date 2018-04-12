@@ -38,7 +38,6 @@ class CalendarViewController: UIViewController {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView") as! ViewController
         
         self.present(nextViewController, animated:true, completion:nil)
-        nextViewController.changeDateLabel(formatter.date(from: selectedDate.text!)!)
     }
     
 }
