@@ -20,6 +20,8 @@ class CalendarViewController: UIViewController {
         let request = NSURLRequest(url:url! as URL);
         WebView.loadRequest(request as URLRequest)
         
+        WebView.scrollView.isScrollEnabled = false;
+        WebView.scrollView.bounces = false;
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,6 +34,5 @@ class CalendarViewController: UIViewController {
         let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
         self.present(thirdViewController, animated:true, completion:nil)
     }
-    
     
 }
