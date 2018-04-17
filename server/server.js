@@ -27,7 +27,7 @@ PythonShell.run('utils/emails.py', function (err, results) {
 
     console.log("Authorized emails:")
     for(let i = 0; i < emails.length; i++) {
-        emails[i] = emails[i].slice(0, emails[i].length - 1) //Comment this line out on production server (windows specific)
+        //emails[i] = emails[i].slice(0, emails[i].length - 1) //Comment this line out on production server (windows specific)
         console.log(emails[i])
     }
     emails.push('benkosten@gmail.com')
@@ -40,7 +40,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(session({
   name: 'server-session-cookie-id',
-  secret: 'my express secret',
+  secret: 'Doesithavetobeaphrase?',
   saveUninitialized: true,
   resave: true,
 }))

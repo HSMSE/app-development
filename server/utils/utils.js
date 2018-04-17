@@ -19,7 +19,7 @@ module.exports = {
         return emails
     },
 
-    getAnnouncements: function(amt, callback) {
+    getAnnouncements: function(callback) {
         callback(null,
             db.get('announcements')
                 .orderBy("date", 'desc')
