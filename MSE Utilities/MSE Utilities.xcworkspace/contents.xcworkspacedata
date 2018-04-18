@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../../Desktop/HSMSE Logo (1).png">
+   </FileRef>
+   <FileRef
+      location = "group:../../../../Downloads/hsmse.jpg">
+   </FileRef>
+   <FileRef
       location = "group:MSE Utilities.xcodeproj">
    </FileRef>
    <FileRef
