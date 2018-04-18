@@ -2,46 +2,90 @@ const express = require("express")
 const app = express()
 const path = require("path")
 const bodyParser = require('body-parser')
+const session = require('express-session');
 
 const keys = require('./keys.json')
 const verifier = require('google-id-token-verifier')
 
 const utils = require('./utils/utils.js')
-//const db = require('./db.js')
 
-app.use(express.static(__dirname + '/static'))
-app.use(bodyParser.json())
+//temp
+const PythonShell = require('python-shell')
 
-//util
-var emails = utils.getAuthorizedEmails()
+//utils
+//var emails = utils.getAuthorizedEmails()
 
-//mongoDB
+/*
+PLEASE FIX THIS HORRIBLE CODE BELOWWWWW!!!!!!!!!!!!!!!!!!!!
+*/
+//gets list of authorized user emails (teachers)
+var emails = []
 
-//announcement view
-app.get('/',function(req,res) {
-    res.sendFile(path.join(__dirname + '/static/index.html'))
+PythonShell.run('utils/emails.py', function (err, results) {
+    if (err) throw err
+    emails = results
+
+    console.log("Authorized emails:")
+    for(let i = 0; i < emails.length; i++) {
+        //emails[i] = emails[i].slice(0, emails[i].length - 1) //Comment this line out on production server (windows specific)
+        console.log(emails[i])
+    }
+    emails.push('benkosten@gmail.com')
 })
+//End of horrible CODE
+
+//express setup
+app.use(express.static(__dirname + '/static'))
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+app.use(session({
+  name: 'server-session-cookie-id',
+  secret: 'Doesithavetobeaphrase?',
+  saveUninitialized: true,
+  resave: true,
+}))
+
+//handle auth
+function checkAuth(req, res, next) {
+    if(!req.session.user_id) {
+        res.status(401).send('Unauthorized')
+    }
+
+    else {
+        //dont cache restricted pages
+        res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
+        next()
+    }
+}
 
 //handle signin
-app.post('/g-signin', function(req, res) {
-    var g_token = req.body['token']
+app.get('/g-signin', function(req, res) {
+    var g_token = req.query["token"]
     verifier.verify(g_token, keys['web']['client_id'], function (err, tokenInfo) {
         if (!err) {
             if(emails.includes(tokenInfo['email'])) {
-                console.log(tokenInfo)
+                //store token for auth
+                req.session.user_id = tokenInfo['sub']
+                res.sendFile(__dirname + '/views/client_page.html')
+            }
+
+            else {
+                res.sendFile(__dirname + '/views/forbidden.html')
             }
         }
-        else {
-            res.status(401)
-        }
     })
-
 })
 
-//Api Routing
+app.post('/api/announcements',  checkAuth, function(req, res) {
+    utils.postAnnouncements(req.body)
+    res.sendFile(__dirname + '/views/client_page.html')
+})
+
 app.get('/api/announcements', function(req, res) {
-    utils.getAnnouncements(function(err, fileData) {
-        res.json(fileData)
+    utils.getAnnouncements(function(err, data) {
+        if(!err) {
+            res.json(data)
+        }
     })
 })
 
