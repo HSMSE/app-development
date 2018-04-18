@@ -1,26 +1,36 @@
 const PythonShell = require('python-shell')
-const jsonfile = require('jsonfile');
 
-//Utility file for various scripts
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+const adapter = new FileSync('announcements.json')
+const db = low(adapter)
+
+//db setup
+db.defaults({announcements: []}).write()
+
 module.exports = {
     getAuthorizedEmails: function() {
-        var emails = []
 
-        PythonShell.run('utils/emails.py', function (err, results) {
+        var emails = PythonShell.run('utils/emails.py', function (err, results) {
             if (err) throw err
-            emails = results
-
-            console.log("Authorized emails:")
-            for(let i = 0; i < emails.length; i++) {
-                //On windows each email ends with \r (carriage return) requiring it to be filtered out otherwise matching doesn't work
-                console.log(emails[i])
-            }
-             emails.push('benkosten@gmail.com')
+            results.push("benkosten@gmail.com")
         })
+
         return emails
     },
 
     getAnnouncements: function(callback) {
-        jsonfile.readFile('announcements.json', callback)
+        callback(null,
+            db.get('announcements')
+                .orderBy("date", 'desc')
+                .take(100)
+                .value()
+        )
+    },
+
+    postAnnouncements: function(data) {
+        db.get('announcements')
+            .push({date: data["date"], subject: data["subject"], message: data["message"]})
+            .write()
     }
 }

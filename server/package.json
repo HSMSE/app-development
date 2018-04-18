@@ -19,10 +19,9 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-session": "^1.15.6",
     "google-id-token-verifier": "^0.2.3",
-    "jsonfile": "^4.0.0",
-    "mongoose": "^4.13.9",
-    "pug": "^2.0.0-rc.4",
+    "lowdb": "^1.0.0",
     "python-shell": "^0.4.0"
   }
 }
