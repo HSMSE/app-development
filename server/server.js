@@ -81,6 +81,11 @@ app.post('/api/announcements',  checkAuth, function(req, res) {
     res.sendFile(__dirname + '/views/client_page.html')
 })
 
+app.delete('/api/announcements', function(req, res) {
+    utils.deleteAnnouncement(req.query)
+    res.sendFile(__dirname + '/views/client_page.html')
+})
+
 app.get('/api/announcements', function(req, res) {
     utils.getAnnouncements(function(err, data) {
         if(!err) {
