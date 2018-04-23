@@ -12,7 +12,6 @@ class CalendarViewController: UIViewController {
     
     @IBOutlet weak var WebView: UIWebView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

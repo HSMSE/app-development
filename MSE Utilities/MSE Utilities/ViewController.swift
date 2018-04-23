@@ -17,33 +17,23 @@ class ViewController: UIViewController {
     
     let formatter = DateFormatter()
     
-    let serverURL = "http://138.197.106.12:7777/app/v1.0/?task=announcements"
+    let serverURL = "http://10.58.81.188:3000/api/announcements"
     
-    var sections = [
-        Section(subject: "XC Team Wins States",
-                text: "They wo jld;ksaj fk;ldshlja jkhdsajkf sdjkh fdskj hdjskahflkjdsah fdjsak bmndsabvnsdbvnmds, bdahlkv dsakjvdlsk dja vjkadshvjdkavsmnbv mcnxbvmnc bvm,nc bvncbvasfdshljkfdsn"),
-        Section(subject: "Girls Soccer Team Wins Nothing",
-                text: "They are  fdsajhds dsm, bfdsanm, fbdsam,n fbdsam, fbkf gadkshfbeaskj fbdasmfdasm bfadkshb khads fkdhas f,hads bfm,ndas fm,das bfmndas b,dnsam, not very good"),
-        Section(subject: "Seniors Hand in Everything!!!",
-                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
-        Section(subject: "Seniors Hand in Everything!!!",
-                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
-        Section(subject: "Seniors Hand in Everything!!!",
-                text: "qewr  fjksh flsdah fkjldsahfkjldsah kjlfdsh flkjdsh fkjlsadh fkjladsh fjkladsh fkjdlash fjkdsa hfkdjas hkldjs fhkldasg f;i7wafgblekwa felawykv hleaw fgieyaw gfkewag fuew gfljewah fkleajwb kdjs fbhasdj faehkw evwui gh4piut n4[poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
-        Section(subject: "Seniors Hand in Everything!!!",
-                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio"),
-        Section(subject: "Seniors Hand in Everything!!!",
-                text: "qewr [poi qwer [pouewr ioepw ruieowqpr ewioru eqwiorueqwj kldslkjkdl;saj l;ds jl;dksj l;adsfl;dsaj lksdaj ;lsajd;lk jsdklsjd;lfjsda;kl jfsda;lk jfsdalk jsdal;k jsd;alk jsd;lk fjsdalk jfsdal;k jfsd;lk jl;adsio rueqwio")
-    ]
+    var subjects: [String] = []
+    var messages: [String] = []
+    
+    var sections: [Section] = []
+    
+    private let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extendedLayoutIncludesOpaqueBars = true
         
         changeDateLabel(Date.init())
+        getAnnouncements()
     }
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -70,63 +60,63 @@ class ViewController: UIViewController {
         announcementsDateLabel.text = formatter.string(from: date)
     }
     
-    /*
-     TO BE IMPLEMENTED
-     
-    func getAnnouncementsFromDate(_ date: Date) {
+    @objc func getAnnouncements() {
         let request = NSMutableURLRequest(url: URL(string: serverURL)!)
         
         request.httpMethod = "GET"
         
-        //creating a task to send the post request
-        
-        //creating a task to send the post request
+        //parse response
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            //exiting if there is some error
-            if error != nil{
+            //catch error
+            if error != nil {
                 print("error is \(String(describing: error))")
                 return;
             }
             
-            //parsing the response
             do {
-                //converting response to NSDictionary
-                var announcementsJSON: NSDictionary!
-                announcementsJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-                
-                //getting the JSON array teams from the response
-                let dates: NSArray = announcementsJSON["dates"] as! NSArray
-                
-                //looping through all the json objects in the array teams
-                for i in 0 ..< dates.count{
+                //store parsed data
+                let JSONinfo = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [NSDictionary]
+
+                DispatchQueue.main.async() { //prevents error
+                    self.sections.removeAll()
+                    self.subjects.removeAll()
+                    self.messages.removeAll()
+                    self.tableView.reloadData()
                     
-                    //getting the data at each index
-                    let teamID:Int = dates[i]["id"] as! Int!
-                    let teamName:String = dates[i]["name"] as! String!
-                    let teamMember:Int = dates[i]["member"] as! Int!
+                    if (JSONinfo!.count == 0) {
+                        self.sections.append(Section(subject: "ERROR", message: "No announcements"))
+                    } else {
+                        for i in 0...JSONinfo!.count-1 {
+                            self.subjects.append("\(JSONinfo![i]["subject"] as! String)")
+                            self.messages.append("\(JSONinfo![i]["message"] as! String)")
+                            self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
+                        }
+                    }
                     
-                    //displaying the data
-                    print("id -> ", teamId)
-                    print("name -> ", teamName)
-                    print("member -> ", teamMember)
-                    print("===================")
-                    print("")
+                    self.tableView.reloadData() //tableView loads before, so we have to reload after adding sections
+                    self.refreshControl.endRefreshing()
                 }
             } catch {
-                print(error)
+                print("caught")
             }
         }
-        //executing the task
         task.resume()
     }
-    */
 }
 
 extension ViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        //add refresh ability when setting up
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(getAnnouncements), for: .valueChanged)
+        
         return sections.count
     }
     
@@ -136,7 +126,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        cell.textLabel?.text = sections[indexPath.section].getText()
+        cell.textLabel?.text = sections[indexPath.section].getMessage()
         return cell
     }
     
