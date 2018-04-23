@@ -26,20 +26,25 @@
 
     <body>
         <div class="nav-bar">
-            <h1>HSMSE Announcements</h1> <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+            <h1>HSMSE Announcements</h1>
         </div>
-        <form action="submit.js">
-            <h3>Date</h3>
-            <input type="date" name="date">
-        </form>
-        <div>
-            <h3>Subject</h3>
-            <textarea rows="1" cols="64" required></textarea>
-        </div>
-        <div>
-            <h3>Body</h3>
-            <textarea rows="4" cols="64" required></textarea>
-            <div/><input type="submit">
-        </div>
+
+
+        <!--Announcement Board stuff-->
+        <form action="/api/announcements" method="post">
+            <h4>Date</h4>
+            <input type="date" name="date" required><br>
+
+            <h4>Subject</h4>
+            <input type="text" name="subject" required><br>
+
+            <h4>Message</h4>
+            <div id="events">
+                <textarea rows="10" cols="50" name="message" required></textarea><br>
+            </div>
+
+            <div id="submitForm">
+                <input type="submit" value="Submit">
+            </div>
     </body>
 </html>
