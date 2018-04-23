@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../Documents/app-development/MSE Utilities/MSE Utilities/hsmse.jpg">
+   </FileRef>
+   <FileRef
       location = "group:MSE Utilities.xcodeproj">
    </FileRef>
    <FileRef
