@@ -35,4 +35,11 @@ class CalculatorViewController: UIViewController {
         self.present(thirdViewController, animated:true, completion:nil)
     }
 
+    
+    @IBAction func toAboutUs(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "aboutUsView")
+        self.present(nextViewController, animated:true, completion:nil)
+    }
 }
