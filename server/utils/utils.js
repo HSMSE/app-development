@@ -37,7 +37,6 @@ module.exports = {
     },
 
     deleteAnnouncement: function(data) {
-        console.log(data)
         db.get('announcements')
             .remove({id: data["id"]})
             .write()
