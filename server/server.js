@@ -76,6 +76,10 @@ app.get('/g-signin', function(req, res) {
     })
 })
 
+app.get('/api/motd', function(req, res) {
+    res.json({m: "Lorem ipsum dolores colores blackes doloar$"})
+})
+
 app.post('/api/announcements',  checkAuth, function(req, res) {
     utils.postAnnouncements(req.body)
     //res.sendFile(__dirname + '/views/client_page.html')
