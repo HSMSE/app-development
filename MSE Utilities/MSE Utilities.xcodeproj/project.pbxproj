@@ -14,6 +14,7 @@
 		24AD943820891A0600DE8E4B /* HSMSE Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 24AD943720891A0600DE8E4B /* HSMSE Logo.png */; };
 		24B6FEA32086576800A16AE5 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B6FEA22086576800A16AE5 /* OpeningViewController.swift */; };
 		24C0FEAC2088F3DC00F72C99 /* hsmse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 24C0FEAB2088F3DC00F72C99 /* hsmse.jpg */; };
+		24CC4DCE2090A9800091D259 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC4DCD2090A9800091D259 /* AboutUsViewController.swift */; };
 		24F09D6720616DDC00FBDE10 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */; };
 		95DD999988CDFD92602072C9 /* Pods_MSE_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		24AD943720891A0600DE8E4B /* HSMSE Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HSMSE Logo.png"; sourceTree = "<group>"; };
 		24B6FEA22086576800A16AE5 /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
 		24C0FEAB2088F3DC00F72C99 /* hsmse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hsmse.jpg; sourceTree = "<group>"; };
+		24CC4DCD2090A9800091D259 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSE_Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +153,7 @@
 				2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */,
 				24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */,
 				24B6FEA22086576800A16AE5 /* OpeningViewController.swift */,
+				24CC4DCD2090A9800091D259 /* AboutUsViewController.swift */,
 				BF2AFD361F9FB53900A02A02 /* Main.storyboard */,
 				24C0FEAB2088F3DC00F72C99 /* hsmse.jpg */,
 				24AD943720891A0600DE8E4B /* HSMSE Logo.png */,
@@ -375,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CC4DCE2090A9800091D259 /* AboutUsViewController.swift in Sources */,
 				2403C7BF20600EBA009D8BBF /* CalendarViewController.swift in Sources */,
 				245392DE2045C74E0002D12E /* Section.swift in Sources */,
 				245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */,
