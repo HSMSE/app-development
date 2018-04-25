@@ -78,7 +78,14 @@ app.get('/g-signin', function(req, res) {
 
 app.post('/api/announcements',  checkAuth, function(req, res) {
     utils.postAnnouncements(req.body)
-    res.sendFile(__dirname + '/views/client_page.html')
+    //res.sendFile(__dirname + '/views/client_page.html')
+    res.redirect("/")
+})
+
+app.delete('/api/announcements', checkAuth, function(req, res) {
+    utils.deleteAnnouncement(req.query)
+    //res.sendFile(__dirname + '/views/client_page.html')
+    res.redirect("/")
 })
 
 app.get('/api/announcements', function(req, res) {

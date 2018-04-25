@@ -13,7 +13,7 @@
         <!--Calculator View Controller-->
         <scene sceneID="Vrj-h1-daz">
             <objects>
-                <viewController storyboardIdentifier="calculatorView" id="QLT-En-VHD" customClass="CalculatorViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calculatorView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QLT-En-VHD" customClass="CalculatorViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8u-1T-DNb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,49 +180,96 @@
         <!--Opening View Controller-->
         <scene sceneID="x4a-f7-kkc">
             <objects>
-                <viewController id="pDC-Hf-xlQ" customClass="OpeningViewController" sceneMemberID="viewController">
+                <viewController id="pDC-Hf-xlQ" customClass="OpeningViewController" customModule="MSE_Utilities" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0Z-6x-RFF" customClass="OpeningViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HSMSE Logo (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="Ebb-Xj-evd">
-                                <rect key="frame" x="163" y="60" width="88" height="119"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2J-pV-35f">
+                                <rect key="frame" x="89" y="482" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calendar">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toCalendar:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="0Od-Xv-h9c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJx-Fy-d4J">
+                                <rect key="frame" x="250" y="482" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About Us">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8n-42-BRd">
+                                <rect key="frame" x="68" y="321" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Announcements">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toAnnouncements:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="8nn-Gf-Lbg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQo-rf-0NU">
+                                <rect key="frame" x="240" y="321" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Calculator">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toCalculator:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="xzd-Xe-jeB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HSMSE Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="u9r-JX-u66">
+                                <rect key="frame" x="158" y="41" width="99" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJE-vn-O2h">
-                                <rect key="frame" x="107" y="372" width="200" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvT-5f-8Rc">
+                                <rect key="frame" x="268" y="422" width="57" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95528603109999999" green="0.90357626599999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Calendar">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="❓"/>
+                                <connections>
+                                    <action selector="toCalc:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="BpD-eG-N6I"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-Ry-PFs">
-                                <rect key="frame" x="107" y="295" width="200" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmj-wD-z72">
+                                <rect key="frame" x="102" y="260" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95528603109999999" green="0.90357626599999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Desmos">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="📋">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="toAnnouncements:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="Mrl-BV-qNE"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8b-A3-Xda">
-                                <rect key="frame" x="107" y="218" width="200" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2F-IP-AS9">
+                                <rect key="frame" x="268" y="260" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95528603109999999" green="0.90357626599999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Announcements">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="📈">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="toCalculator:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="9cy-G5-v4f"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k04-JY-7DE">
-                                <rect key="frame" x="107" y="449" width="200" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph6-I9-psY">
+                                <rect key="frame" x="102" y="421" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.95528603109999999" green="0.90357626599999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="📅">
+                                    <color key="titleColor" red="0.37141717549999997" green="0.1816459231" blue="0.52957011009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="toCalendar:" destination="pDC-Hf-xlQ" eventType="touchUpInside" id="lNC-H4-SGD"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.87986383182326844" green="0.77644009138118331" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="zqI-Vw-kdh"/>
                     </view>
                 </viewController>
@@ -291,6 +338,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HSMSE Logo (1).png" width="530" height="742"/>
+        <image name="HSMSE Logo.png" width="530" height="742"/>
     </resources>
 </document>

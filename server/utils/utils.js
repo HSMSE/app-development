@@ -5,6 +5,8 @@ const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('announcements.json')
 const db = low(adapter)
 
+const uuidv4 = require('uuid/v4')
+
 //db setup
 db.defaults({announcements: []}).write()
 
@@ -30,7 +32,13 @@ module.exports = {
 
     postAnnouncements: function(data) {
         db.get('announcements')
-            .push({date: data["date"], subject: data["subject"], message: data["message"]})
+            .push({date: data["date"], subject: data["subject"], message: data["message"], id: uuidv4()})
+            .write()
+    },
+
+    deleteAnnouncement: function(data) {
+        db.get('announcements')
+            .remove({id: data["id"]})
             .write()
     }
 }
