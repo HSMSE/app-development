@@ -22,6 +22,7 @@
     "express-session": "^1.15.6",
     "google-id-token-verifier": "^0.2.3",
     "lowdb": "^1.0.0",
-    "python-shell": "^0.4.0"
+    "python-shell": "^0.4.0",
+    "uuid": "^3.2.1"
   }
 }
