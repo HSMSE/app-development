@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var announcementsDateLabel: UILabel!
     
     let formatter = DateFormatter()
-    
-    let serverURL = "http://10.58.81.188:3000/api/announcements"
+
+    let announcementsURL = "http://10.58.80.231:3000/api/announcements"
+    let motdURL = "http://10.58.80.231:3000/api/motd"
     
     var subjects: [String] = []
     var messages: [String] = []
@@ -37,6 +38,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showAlert()
     }
     
     @IBAction func toCalendar(_ sender: Any) {
@@ -61,7 +66,10 @@ class ViewController: UIViewController {
     }
     
     @objc func getAnnouncements() {
-        let request = NSMutableURLRequest(url: URL(string: serverURL)!)
+        
+        self.refreshControl.endRefreshing()
+        
+        let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
         
         request.httpMethod = "GET"
         
@@ -71,7 +79,12 @@ class ViewController: UIViewController {
             
             //catch error
             if error != nil {
+                self.sections.removeAll()
+                self.tableView.reloadData()
+                
                 print("error is \(String(describing: error))")
+                self.sections.append(Section(subject: "ERROR", message: "Unable to connect to server"))
+                self.tableView.reloadData()
                 return;
             }
             
@@ -96,14 +109,79 @@ class ViewController: UIViewController {
                     }
                     
                     self.tableView.reloadData() //tableView loads before, so we have to reload after adding sections
-                    self.refreshControl.endRefreshing()
                 }
             } catch {
                 print("caught")
             }
         }
         task.resume()
-
+    }
+    
+    /*
+    func writeToCache() {
+        for i in 0...subjects.count {
+            let text = subjects[i]
+            
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                
+                let fileURL = dir.appendingPathComponent("announcements.txt")
+                
+                do {
+                    try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                }
+                catch {}
+            }
+        }
+        for i in 0...messages.count {
+            let text = messages[i]
+            
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                
+                let fileURL = dir.appendingPathComponent("announcements.txt")
+                
+                do {
+                    try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                }
+                catch {}
+            }
+        }
+    }
+    */
+    
+    func showAlert() {
+        
+        let request = NSMutableURLRequest(url: URL(string: motdURL)!)
+        
+        request.httpMethod = "GET"
+        
+        //parse response
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            //catch error
+            if error != nil {
+                
+                return;
+            }
+            
+            do {
+                //store parsed data
+                let JSONinfo = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                DispatchQueue.main.async() { //prevents error
+                    let alertController = UIAlertController(title: "Message of the Day", message:
+                        JSONinfo?["m"] as? String, preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            } catch {
+                print("caught")
+            }
+        }
+        task.resume()
+        
+        
     }
 }
 
