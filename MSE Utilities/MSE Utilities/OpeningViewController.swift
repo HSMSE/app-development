@@ -11,9 +11,48 @@ import UIKit
 
 class OpeningViewController: UIViewController {
 
+    let motdURL = "http://10.58.80.231:3000/api/motd"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showAlert()
+    }
+    
+    func showAlert() {
+        let request = NSMutableURLRequest(url: URL(string: motdURL)!)
+        
+        request.httpMethod = "GET"
+        
+        //parse response
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            //catch error
+            if error != nil {
+                
+                return;
+            }
+            
+            do {
+                //store parsed data
+                let JSONinfo = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                DispatchQueue.main.async() { //prevents error
+                    let alertController = UIAlertController(title: "Message of the Day", message:
+                        JSONinfo?["m"] as? String, preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            } catch {
+                print("caught")
+            }
+        }
+        task.resume()
     }
     
     override func didReceiveMemoryWarning() {
