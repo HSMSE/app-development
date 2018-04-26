@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2403C7BF20600EBA009D8BBF /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */; };
+		2403C7BF20600EBA009D8BBF /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2403C7BE20600EBA009D8BBF /* CalendarVC.swift */; };
 		241A36B3206D452300772C95 /* desmos.html in Resources */ = {isa = PBXBuildFile; fileRef = 241A36B2206D452300772C95 /* desmos.html */; };
 		243B53B62091069B00A9EEFB /* HSMSE Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 243B53B52091069B00A9EEFB /* HSMSE Logo.png */; };
-		243B53B82091074600A9EEFB /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B53B72091074600A9EEFB /* AboutUsViewController.swift */; };
+		243B53B82091074600A9EEFB /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243B53B72091074600A9EEFB /* AboutUsVC.swift */; };
 		245392DE2045C74E0002D12E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392DD2045C74E0002D12E /* Section.swift */; };
 		245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245392E02045C7F00002D12E /* ExpandableHeaderView.swift */; };
-		24B6FEA32086576800A16AE5 /* OpeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B6FEA22086576800A16AE5 /* OpeningViewController.swift */; };
-		24F09D6720616DDC00FBDE10 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */; };
+		24B6FEA32086576800A16AE5 /* OpeningVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B6FEA22086576800A16AE5 /* OpeningVC.swift */; };
+		24F09D6720616DDC00FBDE10 /* CalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F09D6620616DDC00FBDE10 /* CalculatorVC.swift */; };
 		95DD999988CDFD92602072C9 /* Pods_MSE_Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */; };
 		BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */; };
-		BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD341F9FB53900A02A02 /* ViewController.swift */; };
+		BF2AFD351F9FB53900A02A02 /* AnnouncementsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2AFD341F9FB53900A02A02 /* AnnouncementsVC.swift */; };
 		BF2AFD381F9FB53900A02A02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2AFD361F9FB53900A02A02 /* Main.storyboard */; };
 		BF2AFD3A1F9FB53900A02A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF2AFD391F9FB53900A02A02 /* Assets.xcassets */; };
 		BF2AFD3D1F9FB53900A02A02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF2AFD3B1F9FB53900A02A02 /* LaunchScreen.storyboard */; };
@@ -44,18 +44,18 @@
 
 /* Begin PBXFileReference section */
 		1F3A3C70FFA09E7F901140AC /* Pods-MSE Utilities.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MSE Utilities.release.xcconfig"; path = "Pods/Target Support Files/Pods-MSE Utilities/Pods-MSE Utilities.release.xcconfig"; sourceTree = "<group>"; };
-		2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		2403C7BE20600EBA009D8BBF /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		241A36B2206D452300772C95 /* desmos.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = desmos.html; sourceTree = "<group>"; };
 		243B53B52091069B00A9EEFB /* HSMSE Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HSMSE Logo.png"; sourceTree = "<group>"; };
-		243B53B72091074600A9EEFB /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		243B53B72091074600A9EEFB /* AboutUsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
 		245392DD2045C74E0002D12E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		245392E02045C7F00002D12E /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
-		24B6FEA22086576800A16AE5 /* OpeningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
-		24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		24B6FEA22086576800A16AE5 /* OpeningVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningVC.swift; sourceTree = "<group>"; };
+		24F09D6620616DDC00FBDE10 /* CalculatorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorVC.swift; sourceTree = "<group>"; };
 		B4CD412F017DBD0570A94F21 /* Pods_MSE_Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSE_Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD2F1F9FB53900A02A02 /* MSE Utilities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MSE Utilities.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF2AFD321F9FB53900A02A02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF2AFD341F9FB53900A02A02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF2AFD341F9FB53900A02A02 /* AnnouncementsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsVC.swift; sourceTree = "<group>"; };
 		BF2AFD371F9FB53900A02A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF2AFD391F9FB53900A02A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF2AFD3C1F9FB53900A02A02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -147,11 +147,11 @@
 			isa = PBXGroup;
 			children = (
 				245392DF2045C7AF0002D12E /* ExpandableHeaderView */,
-				BF2AFD341F9FB53900A02A02 /* ViewController.swift */,
-				2403C7BE20600EBA009D8BBF /* CalendarViewController.swift */,
-				24F09D6620616DDC00FBDE10 /* CalculatorViewController.swift */,
-				24B6FEA22086576800A16AE5 /* OpeningViewController.swift */,
-				243B53B72091074600A9EEFB /* AboutUsViewController.swift */,
+				BF2AFD341F9FB53900A02A02 /* AnnouncementsVC.swift */,
+				2403C7BE20600EBA009D8BBF /* CalendarVC.swift */,
+				24F09D6620616DDC00FBDE10 /* CalculatorVC.swift */,
+				24B6FEA22086576800A16AE5 /* OpeningVC.swift */,
+				243B53B72091074600A9EEFB /* AboutUsVC.swift */,
 				BF2AFD361F9FB53900A02A02 /* Main.storyboard */,
 				241A36B2206D452300772C95 /* desmos.html */,
 				243B53B52091069B00A9EEFB /* HSMSE Logo.png */,
@@ -374,13 +374,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243B53B82091074600A9EEFB /* AboutUsViewController.swift in Sources */,
-				2403C7BF20600EBA009D8BBF /* CalendarViewController.swift in Sources */,
+				243B53B82091074600A9EEFB /* AboutUsVC.swift in Sources */,
+				2403C7BF20600EBA009D8BBF /* CalendarVC.swift in Sources */,
 				245392DE2045C74E0002D12E /* Section.swift in Sources */,
 				245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */,
-				BF2AFD351F9FB53900A02A02 /* ViewController.swift in Sources */,
-				24B6FEA32086576800A16AE5 /* OpeningViewController.swift in Sources */,
-				24F09D6720616DDC00FBDE10 /* CalculatorViewController.swift in Sources */,
+				BF2AFD351F9FB53900A02A02 /* AnnouncementsVC.swift in Sources */,
+				24B6FEA32086576800A16AE5 /* OpeningVC.swift in Sources */,
+				24F09D6720616DDC00FBDE10 /* CalculatorVC.swift in Sources */,
 				BF2AFD331F9FB53900A02A02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

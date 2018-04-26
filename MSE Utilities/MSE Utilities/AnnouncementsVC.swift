@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  AnnouncementsVC.swift
 //  MSE Utilities
 //
-//  Main View Controller for view scrolling feature
+//  Announcements View Controller
 //
 //  Created by Randolph Xia on 10/24/17.
 //  Copyright © 2017 HSMSE. All rights reserved.
@@ -10,7 +10,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AnnouncementsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var announcementsDateLabel: UILabel!
@@ -50,8 +50,8 @@ class ViewController: UIViewController {
     @IBAction func toCalculator(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
-        self.present(thirdViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
+        self.present(nextViewController, animated:true, completion:nil)
         
     }
     
@@ -144,7 +144,7 @@ class ViewController: UIViewController {
     */
 }
 
-extension ViewController: UITableViewDataSource {
+extension AnnouncementsVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         //add refresh ability when setting up
@@ -170,7 +170,7 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-extension ViewController: UITableViewDelegate {
+extension AnnouncementsVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = ExpandableHeaderView()
@@ -201,7 +201,7 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController: ExpandableHeaderViewDelegate {
+extension AnnouncementsVC: ExpandableHeaderViewDelegate {
     
     func toggleSection(header: ExpandableHeaderView, section: Int) {
         sections[section].expanded = !sections[section].expanded

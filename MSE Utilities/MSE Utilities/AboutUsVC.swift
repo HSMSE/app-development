@@ -1,15 +1,17 @@
 //
-//  AboutUsViewController.swift
+//  AboutUsVC.swift
 //  MSE Utilities
 //
-//  Created by Temp on 4/25/18.
+//  Info view displaying group members
+//
+//  Created by Alexandra Eagan on 4/25/18.
 //  Copyright © 2018 HSMSE. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class AboutUsViewController: UIViewController {
+class AboutUsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +34,7 @@ class AboutUsViewController: UIViewController {
     @IBAction func toCalculator(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
-        self.present(thirdViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
+        self.present(nextViewController, animated:true, completion:nil)
     }
 }

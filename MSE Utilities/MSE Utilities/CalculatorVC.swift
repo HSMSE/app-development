@@ -1,17 +1,19 @@
 //
-//  CalculatorViewController.swift
+//  CalculatorVC.swift
 //  MSE Utilities
 //
-//  Created by Temp on 3/20/18.
+//  Desmos API calculator
+//
+//  Created by Alexandra Eagan, Jennifer Cen on 3/20/18.
 //  Copyright © 2018 HSMSE. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorVC: UIViewController {
     
-    @IBOutlet weak var WebView: UIWebView!
+    @IBOutlet weak var webView: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,7 @@ class CalculatorViewController: UIViewController {
         
         let htmlFile = Bundle.main.path(forResource: "desmos", ofType: "html")
         let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
-        WebView.loadHTMLString(html!, baseURL: nil)
+        webView.loadHTMLString(html!, baseURL: nil)
         
     }
     
@@ -31,8 +33,8 @@ class CalculatorViewController: UIViewController {
     @IBAction func toAnnouncements(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
-        self.present(thirdViewController, animated:true, completion:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
+        self.present(nextViewController, animated:true, completion:nil)
     }
 
     

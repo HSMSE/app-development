@@ -1,15 +1,17 @@
 //
-//  OpeningViewController.swift
+//  OpeningVC.swift
 //  MSE Utilities
 //
-//  Created by Temp on 4/17/18.
+//  Initial View Controller
+//
+//  Created by Alexandra Eagan, Jennifer Cen on 4/17/18.
 //  Copyright © 2018 HSMSE. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class OpeningViewController: UIViewController {
+class OpeningVC: UIViewController {
 
     let motdURL = "http://10.58.80.231:3000/api/motd"
     
@@ -20,6 +22,41 @@ class OpeningViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         showAlert()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func toAnnouncements(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    
+    @IBAction func toCalculator(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    @IBAction func toCalendar(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calendarView")
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+    
+    
+    @IBAction func toAboutUs(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "aboutUsView")
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
     func showAlert() {
@@ -53,41 +90,6 @@ class OpeningViewController: UIViewController {
             }
         }
         task.resume()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func toAnnouncements(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
-        self.present(thirdViewController, animated:true, completion:nil)
-    }
-    
-    
-    @IBAction func toCalculator(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let thirdViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
-        self.present(thirdViewController, animated:true, completion:nil)
-    }
-    
-    @IBAction func toCalendar(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calendarView")
-        self.present(nextViewController, animated:true, completion:nil)
-    }
-    
-    
-    @IBAction func toAboutUs(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "aboutUsView")
-        self.present(nextViewController, animated:true, completion:nil)
     }
     
 }

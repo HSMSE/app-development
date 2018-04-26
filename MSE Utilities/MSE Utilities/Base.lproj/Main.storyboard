@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Calculator View Controller-->
+        <!--CalculatorVC-->
         <scene sceneID="Vrj-h1-daz">
             <objects>
-                <viewController storyboardIdentifier="calculatorView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QLT-En-VHD" customClass="CalculatorViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calculatorView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QLT-En-VHD" customClass="CalculatorVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E8u-1T-DNb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,17 +75,17 @@
                         <viewLayoutGuide key="safeArea" id="aJM-4K-L84"/>
                     </view>
                     <connections>
-                        <outlet property="WebView" destination="8NS-5G-Sc8" id="wef-54-bhS"/>
+                        <outlet property="webView" destination="8NS-5G-Sc8" id="q76-mN-bAM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw7-OG-Q37" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1656.521739130435" y="-110.05434782608697"/>
         </scene>
-        <!--View Controller-->
+        <!--AnnouncementsVC-->
         <scene sceneID="fmy-ny-DBI">
             <objects>
-                <viewController storyboardIdentifier="announcementsView" id="vwU-q2-37a" customClass="ViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="announcementsView" id="vwU-q2-37a" customClass="AnnouncementsVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIC-m2-ypg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="-868" y="-110.19490254872565"/>
         </scene>
-        <!--Opening View Controller-->
+        <!--OpeningVC-->
         <scene sceneID="x4a-f7-kkc">
             <objects>
-                <viewController id="pDC-Hf-xlQ" customClass="OpeningViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pDC-Hf-xlQ" customClass="OpeningVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0Z-6x-RFF" customClass="OpeningViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="-491" y="561"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--CalendarVC-->
         <scene sceneID="TbF-QO-RMF">
             <objects>
-                <viewController storyboardIdentifier="calendarView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bo8-GD-4EX" customClass="CalendarViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="calendarView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bo8-GD-4EX" customClass="CalendarVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QdQ-pq-txt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -365,17 +365,17 @@
                         <viewLayoutGuide key="safeArea" id="tvy-bZ-TAY"/>
                     </view>
                     <connections>
-                        <outlet property="WebView" destination="Z3E-YG-4ZD" id="4Em-jd-M04"/>
+                        <outlet property="webView" destination="Z3E-YG-4ZD" id="xpk-Bf-pf4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qY-uT-1qq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-95.652173913043484" y="-110.86956521739131"/>
         </scene>
-        <!--About Us View Controller-->
+        <!--About UsVC-->
         <scene sceneID="oob-mb-dY6">
             <objects>
-                <viewController storyboardIdentifier="aboutUsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nBi-BY-hjh" customClass="AboutUsViewController" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="aboutUsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nBi-BY-hjh" customClass="AboutUsVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vt9-vi-CTz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
