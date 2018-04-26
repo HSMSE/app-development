@@ -152,6 +152,7 @@
 				24F09D6620616DDC00FBDE10 /* CalculatorVC.swift */,
 				24B6FEA22086576800A16AE5 /* OpeningVC.swift */,
 				243B53B72091074600A9EEFB /* AboutUsVC.swift */,
+				24CCB9B620925464004362AA /* CustomCollectionViewCell.swift */,
 				BF2AFD361F9FB53900A02A02 /* Main.storyboard */,
 				241A36B2206D452300772C95 /* desmos.html */,
 				243B53B52091069B00A9EEFB /* HSMSE Logo.png */,
@@ -376,6 +377,7 @@
 			files = (
 				243B53B82091074600A9EEFB /* AboutUsVC.swift in Sources */,
 				2403C7BF20600EBA009D8BBF /* CalendarVC.swift in Sources */,
+				24CCB9B720925464004362AA /* CustomCollectionViewCell.swift in Sources */,
 				245392DE2045C74E0002D12E /* Section.swift in Sources */,
 				245392E12045C7F00002D12E /* ExpandableHeaderView.swift in Sources */,
 				BF2AFD351F9FB53900A02A02 /* AnnouncementsVC.swift in Sources */,
