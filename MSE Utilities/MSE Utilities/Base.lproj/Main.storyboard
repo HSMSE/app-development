@@ -90,18 +90,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="yo" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLo-C6-i4d">
-                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="naD-2o-NQw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e6Y-pr-v7a">
                                 <rect key="frame" x="0.0" y="106" width="414" height="630"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="630" id="kXS-UA-cID"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="labelCell" textLabel="fpz-pl-aUQ" style="IBUITableViewCellStyleDefault" id="V6d-qn-buX">
                                         <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="44"/>
@@ -163,20 +157,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-DC-HeV">
+                                <rect key="frame" x="20" y="68" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="yLo-C6-i4d" secondAttribute="bottom" constant="-2" id="1Zk-DL-sZN"/>
-                            <constraint firstItem="yLo-C6-i4d" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="21Y-xt-bOG"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="bottom" secondItem="dtQ-5l-5HD" secondAttribute="bottom" id="4zj-8d-ccg"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="trailing" secondItem="dtQ-5l-5HD" secondAttribute="trailing" id="aCh-gR-2ZA"/>
-                            <constraint firstItem="yLo-C6-i4d" firstAttribute="top" secondItem="dJV-yQ-uTE" secondAttribute="bottom" id="aKb-Av-16G"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="centerX" secondItem="Je8-DC-HeV" secondAttribute="centerX" id="ceI-Zc-a37"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" id="dgX-Ah-0Rm"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" id="hfd-PV-PBh"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="iP4-SS-bQ4"/>
-                            <constraint firstItem="yLo-C6-i4d" firstAttribute="trailing" secondItem="dJV-yQ-uTE" secondAttribute="trailing" id="pOK-CK-uIR"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="trailing" secondItem="dJV-yQ-uTE" secondAttribute="trailing" id="sxg-ma-7YL"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="Je8-DC-HeV" secondAttribute="bottom" constant="8" symbolic="YES" id="uLO-ZA-T9H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtQ-5l-5HD"/>
                         <connections>
@@ -184,14 +182,14 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="announcementsDateLabel" destination="yLo-C6-i4d" id="Awv-6D-Dyq"/>
+                        <outlet property="announcementsDateText" destination="Je8-DC-HeV" id="dvd-ZE-R8V"/>
                         <outlet property="tableView" destination="e6Y-pr-v7a" id="z5C-N2-IrZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eQ0-Vc-in8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="left" id="Ir3-GE-lJw"/>
             </objects>
-            <point key="canvasLocation" x="-868" y="-110.19490254872565"/>
+            <point key="canvasLocation" x="-868.11594202898561" y="-110.86956521739131"/>
         </scene>
         <!--OpeningVC-->
         <scene sceneID="x4a-f7-kkc">

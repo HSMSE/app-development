@@ -13,9 +13,10 @@ import UIKit
 class AnnouncementsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var announcementsDateLabel: UILabel!
+    @IBOutlet weak var announcementsDateText: UITextField!
     
     let formatter = DateFormatter()
+    let datePicker = UIDatePicker()
 
     let announcementsURL = "http://10.58.80.231:3000/api/announcements"
     
@@ -31,6 +32,7 @@ class AnnouncementsVC: UIViewController {
         self.extendedLayoutIncludesOpaqueBars = true
         
         changeDateLabel(Date.init())
+        createDatePicker()
         getAnnouncements()
     }
 
@@ -57,7 +59,7 @@ class AnnouncementsVC: UIViewController {
     
     func changeDateLabel(_ date: Date) {
         formatter.dateFormat = "EEEE, MMMM dd, yyyy"
-        announcementsDateLabel.text = formatter.string(from: date)
+        announcementsDateText.text = formatter.string(from: date)
     }
     
     @objc func getAnnouncements() {
@@ -112,36 +114,25 @@ class AnnouncementsVC: UIViewController {
         task.resume()
     }
     
-    /*
-    func writeToCache() {
-        for i in 0...subjects.count {
-            let text = subjects[i]
-            
-            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                
-                let fileURL = dir.appendingPathComponent("announcements.txt")
-                
-                do {
-                    try text.write(to: fileURL, atomically: false, encoding: .utf8)
-                }
-                catch {}
-            }
-        }
-        for i in 0...messages.count {
-            let text = messages[i]
-            
-            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                
-                let fileURL = dir.appendingPathComponent("announcements.txt")
-                
-                do {
-                    try text.write(to: fileURL, atomically: false, encoding: .utf8)
-                }
-                catch {}
-            }
-        }
+    func createDatePicker() {
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: false)
+        
+        announcementsDateText.inputAccessoryView = toolbar
+        
+        announcementsDateText.inputView = datePicker
+        
     }
-    */
+    
+    @objc func donePressed() {
+        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        announcementsDateText.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
 }
 
 extension AnnouncementsVC: UITableViewDataSource {
