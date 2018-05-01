@@ -15,6 +15,7 @@ struct Person {
     var name: String
     var position: String
     var quote: String
+    var picture: String
 }
 
 
@@ -23,14 +24,14 @@ class AboutUsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     @IBOutlet weak var collectionView: UICollectionView!
     
     let members = [
-        Person(name: "Randolph Xia", position: "Founder / Co-Leader", quote: "Rensselaer Polytechnic Institute \nClass of 2022"),
-        Person(name: "Max Li", position: "Co-Leader", quote: "University of Michigan \nClass of 2022"),
-        Person(name: "Ben Kosten", position: "Backend Developer", quote: "University of Wisconsin–Madison \nClass of 2022"),
-        Person(name: "Julian Torreno", position: "Backend Developer", quote: "University at Buffalo \nClass of 2022"),
-        Person(name: "Matthew Coudert", position: "Frontend Developer", quote: "University of Saint Andrews \nClass of 2022"),
-        Person(name: "Fatumata Jalloh", position: "Frontend Developer", quote: "Brandeis University \nClass of 2022"),
-        Person(name: "Jennifer Cen", position: "Frontend Developer / Documenter", quote: "New York University \nClass of 2022"),
-        Person(name: "Alexandra Eagan", position: "Frontend Developer / Documenter", quote: "Rensselaer Polytechnic Institute \nClass of 2022")
+        Person(name: "Randolph Xia", position: "Founder / Co-Leader", quote: "Rensselaer Polytechnic Institute \nClass of 2022", picture: "Samoyed.jpg"),
+        Person(name: "Max Li", position: "Co-Leader", quote: "University of Michigan \nClass of 2022", picture: "German Shepherd.jpg"),
+        Person(name: "Ben Kosten", position: "Backend Developer", quote: "University of Wisconsin–Madison \nClass of 2022", picture: "Wolf.jpg"),
+        Person(name: "Julian Torreno", position: "Backend Developer", quote: "University at Buffalo \nClass of 2022", picture: "Poodle.jpeg"),
+        Person(name: "Matthew Coudert", position: "Frontend Developer", quote: "University of Saint Andrews \nClass of 2022", picture: "Ginger Dog.jpg"),
+        Person(name: "Fatumata Jalloh", position: "Frontend Developer", quote: "Brandeis University \nClass of 2022", picture: "Kitten.jpeg"),
+        Person(name: "Jennifer Cen", position: "Frontend Developer / Documenter", quote: "New York University \nClass of 2022", picture: "Husky.jpg"),
+        Person(name: "Alexandra Eagan", position: "Frontend Developer / Documenter", quote: "Rensselaer Polytechnic Institute \nClass of 2022", picture: "Chow Chow.jpg")
     ]
     
     override func viewDidLoad() {
@@ -49,7 +50,9 @@ class AboutUsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCollectionViewCell
         
-        //cell.imageCell.image = UIImage(named: members[indexPath.row])
+        
+        cell.imageCell.image = UIImage(named: "Images/" + members[indexPath.row].picture)
+        
         cell.nameCell.text = members[indexPath.row].name
         cell.positionCell.text = members[indexPath.row].position
         cell.descriptionCell.text = members[indexPath.row].quote
@@ -77,4 +80,3 @@ class AboutUsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         self.present(nextViewController, animated:true, completion:nil)
     }
 }
-
