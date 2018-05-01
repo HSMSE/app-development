@@ -13,7 +13,7 @@ import UIKit
 
 class OpeningVC: UIViewController {
 
-    let motdURL = "http://10.58.80.231:3000/api/motd"
+    let motdURL = "http://10.58.81.46:3000/api/motd"
     
     override func viewDidLoad() {
         super.viewDidLoad()
