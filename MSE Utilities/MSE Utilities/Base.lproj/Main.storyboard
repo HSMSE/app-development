@@ -91,10 +91,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="e6Y-pr-v7a">
-                                <rect key="frame" x="0.0" y="106" width="414" height="630"/>
+                                <rect key="frame" x="0.0" y="110" width="414" height="626"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="630" id="kXS-UA-cID"/>
+                                    <constraint firstAttribute="height" constant="626" id="kXS-UA-cID"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="labelCell" textLabel="fpz-pl-aUQ" style="IBUITableViewCellStyleDefault" id="V6d-qn-buX">
@@ -157,10 +157,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-DC-HeV">
-                                <rect key="frame" x="20" y="68" width="374" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-DC-HeV">
+                                <rect key="frame" x="20" y="72" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
@@ -169,12 +173,10 @@
                         <constraints>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="bottom" secondItem="dtQ-5l-5HD" secondAttribute="bottom" id="4zj-8d-ccg"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="trailing" secondItem="dtQ-5l-5HD" secondAttribute="trailing" id="aCh-gR-2ZA"/>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="centerX" secondItem="Je8-DC-HeV" secondAttribute="centerX" id="ceI-Zc-a37"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" id="dgX-Ah-0Rm"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" id="hfd-PV-PBh"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="iP4-SS-bQ4"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="trailing" secondItem="dJV-yQ-uTE" secondAttribute="trailing" id="sxg-ma-7YL"/>
-                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="Je8-DC-HeV" secondAttribute="bottom" constant="8" symbolic="YES" id="uLO-ZA-T9H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtQ-5l-5HD"/>
                         <connections>
