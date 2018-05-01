@@ -68,6 +68,7 @@ class AnnouncementsVC: UIViewController {
         
         let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
         
+        request.timeoutInterval = 5
         request.httpMethod = "GET"
         
         //parse response
@@ -76,12 +77,11 @@ class AnnouncementsVC: UIViewController {
             
             //catch error
             if error != nil {
-                self.sections.removeAll()
-                self.tableView.reloadData()
+                let alertController = UIAlertController(title: "Can't load announcements", message:
+                    "Unable to connect to the server", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 
-                print("error is \(String(describing: error))")
-                self.sections.append(Section(subject: "ERROR", message: "Unable to connect to server"))
-                self.tableView.reloadData()
+                self.present(alertController, animated: true, completion: nil)
                 return;
             }
             
@@ -115,6 +115,8 @@ class AnnouncementsVC: UIViewController {
     }
     
     func createDatePicker() {
+        
+        datePicker.datePickerMode = UIDatePickerMode.date;
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
