@@ -459,9 +459,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYN-py-fkp">
-                                                    <rect key="frame" x="0.0" y="220" width="350" height="80"/>
+                                                    <rect key="frame" x="0.0" y="220" width="350" height="60"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="Xn8-6Z-p4C"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Xn8-6Z-p4C"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
