@@ -41,6 +41,8 @@ class AboutUsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,6 +54,8 @@ class AboutUsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
         
         cell.imageCell.image = UIImage(named: "Images/" + members[indexPath.row].picture)
+        cell.imageCell.layer.masksToBounds = true
+        cell.imageCell.layer.cornerRadius = 20
         
         cell.nameCell.text = members[indexPath.row].name
         cell.positionCell.text = members[indexPath.row].position
