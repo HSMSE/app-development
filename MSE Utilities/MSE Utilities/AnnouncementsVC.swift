@@ -20,7 +20,7 @@ class AnnouncementsVC: UIViewController {
     
     private let refreshControl = UIRefreshControl()
     
-    let announcementsURL = "http://10.58.81.46:3000/api/announcements"
+    let announcementsURL = "http://10.58.81.164:3000/api/announcements"
     
     var subjects: [String] = []
     var messages: [String] = []
@@ -106,9 +106,12 @@ class AnnouncementsVC: UIViewController {
                         self.sections.append(Section(subject: "ERROR", message: "No announcements"))
                     } else {
                         for i in 0...JSONinfo!.count-1 {
+                            self.formatter.dateFormat = "yyyy-MM-dd"
                             self.subjects.append("\(JSONinfo![i]["subject"] as! String)")
                             self.messages.append("\(JSONinfo![i]["message"] as! String)")
-                            self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
+                            if (JSONinfo![i]["date"] as? String == self.formatter.string(from: self.currentDate)) {
+                                self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
+                            }
                         }
                     }
                     
@@ -143,6 +146,8 @@ class AnnouncementsVC: UIViewController {
     
     @objc func donePressed() {
         changeDateText(datePicker.date)
+        currentDate = datePicker.date
+        getAnnouncements()
         self.view.endEditing(true)
     }
 }
