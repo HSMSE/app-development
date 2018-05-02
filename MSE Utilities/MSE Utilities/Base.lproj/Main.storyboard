@@ -431,18 +431,18 @@
                                     <size key="itemSize" width="350" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="30" maxX="10" maxY="30"/>
+                                    <inset key="sectionInset" minX="10" minY="35" maxX="10" maxY="35"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="1bk-vh-VaZ" customClass="CustomCollectionViewCell" customModule="MSE_Utilities" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="30" width="350" height="300"/>
+                                        <rect key="frame" x="32" y="35" width="350" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqd-8p-7iY">
-                                                    <rect key="frame" x="0.0" y="150" width="350" height="35"/>
+                                                    <rect key="frame" x="149.33333333333334" y="160" width="51.666666666666657" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="NEA-g9-xJV"/>
                                                     </constraints>
@@ -450,18 +450,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxJ-7P-OeI">
-                                                    <rect key="frame" x="0.0" y="185" width="350" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="XDq-2r-0fD"/>
-                                                        <constraint firstAttribute="width" constant="350" id="kKb-9O-6uz"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYN-py-fkp">
-                                                    <rect key="frame" x="0.0" y="220" width="350" height="60"/>
+                                                    <rect key="frame" x="131.33333333333334" y="240" width="87.666666666666657" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="Xn8-6Z-p4C"/>
                                                     </constraints>
@@ -476,20 +466,28 @@
                                                         <constraint firstAttribute="width" constant="150" id="plL-dg-Dl4"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxJ-7P-OeI">
+                                                    <rect key="frame" x="0.0" y="200" width="350" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="XDq-2r-0fD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="gqd-8p-7iY" firstAttribute="top" secondItem="Bc6-OF-CZr" secondAttribute="bottom" constant="10" id="0zS-mW-1xv"/>
                                             <constraint firstItem="XYN-py-fkp" firstAttribute="centerX" secondItem="1bk-vh-VaZ" secondAttribute="centerX" id="2FZ-hv-GiF"/>
-                                            <constraint firstItem="XYN-py-fkp" firstAttribute="top" secondItem="bxJ-7P-OeI" secondAttribute="bottom" id="4pE-a0-CHW"/>
-                                            <constraint firstItem="bxJ-7P-OeI" firstAttribute="leading" secondItem="XYN-py-fkp" secondAttribute="leading" id="7km-Qi-TNM"/>
+                                            <constraint firstItem="XYN-py-fkp" firstAttribute="top" secondItem="bxJ-7P-OeI" secondAttribute="bottom" constant="5" id="7WL-Be-Fyd"/>
+                                            <constraint firstItem="bxJ-7P-OeI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1bk-vh-VaZ" secondAttribute="leading" id="7km-Qi-TNM"/>
                                             <constraint firstItem="bxJ-7P-OeI" firstAttribute="centerX" secondItem="1bk-vh-VaZ" secondAttribute="centerX" id="BR5-ML-bJS"/>
                                             <constraint firstItem="gqd-8p-7iY" firstAttribute="centerX" secondItem="1bk-vh-VaZ" secondAttribute="centerX" id="CPZ-YX-6qS"/>
                                             <constraint firstItem="Bc6-OF-CZr" firstAttribute="centerX" secondItem="1bk-vh-VaZ" secondAttribute="centerX" id="F3L-aS-piB"/>
-                                            <constraint firstItem="bxJ-7P-OeI" firstAttribute="trailing" secondItem="XYN-py-fkp" secondAttribute="trailing" id="c3G-Ke-Hvj"/>
+                                            <constraint firstItem="bxJ-7P-OeI" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1bk-vh-VaZ" secondAttribute="trailing" id="c3G-Ke-Hvj"/>
                                             <constraint firstItem="Bc6-OF-CZr" firstAttribute="top" secondItem="1bk-vh-VaZ" secondAttribute="top" id="caC-lZ-19J"/>
-                                            <constraint firstItem="bxJ-7P-OeI" firstAttribute="top" secondItem="gqd-8p-7iY" secondAttribute="bottom" id="gWh-OJ-25S"/>
-                                            <constraint firstItem="gqd-8p-7iY" firstAttribute="top" secondItem="Bc6-OF-CZr" secondAttribute="bottom" id="ogz-ax-rIs"/>
-                                            <constraint firstItem="bxJ-7P-OeI" firstAttribute="leading" secondItem="gqd-8p-7iY" secondAttribute="leading" id="x4R-pT-BDL"/>
+                                            <constraint firstAttribute="bottom" secondItem="XYN-py-fkp" secondAttribute="bottom" id="hN3-NC-Mro"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="descriptionCell" destination="XYN-py-fkp" id="fLI-Zk-RKF"/>
