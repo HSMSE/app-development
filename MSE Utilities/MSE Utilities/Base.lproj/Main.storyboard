@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pDC-Hf-xlQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pDC-Hf-xlQ">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +21,9 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NS-5G-Sc8">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QLT-En-VHD" id="8V9-x2-aFL"/>
+                                </connections>
                             </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-h5-Yr4">
                                 <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -61,6 +64,9 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UJd-GP-eoa">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -68,13 +74,16 @@
                             <constraint firstItem="RE7-h5-Yr4" firstAttribute="leading" secondItem="aJM-4K-L84" secondAttribute="leading" id="DPW-MS-Nem"/>
                             <constraint firstItem="RE7-h5-Yr4" firstAttribute="trailing" secondItem="aJM-4K-L84" secondAttribute="trailing" id="J2E-hC-JEW"/>
                             <constraint firstItem="8NS-5G-Sc8" firstAttribute="top" secondItem="RE7-h5-Yr4" secondAttribute="bottom" id="TKM-WN-4W0"/>
+                            <constraint firstItem="UJd-GP-eoa" firstAttribute="centerY" secondItem="E8u-1T-DNb" secondAttribute="centerY" id="auk-sr-Fyu"/>
                             <constraint firstItem="RE7-h5-Yr4" firstAttribute="top" secondItem="aJM-4K-L84" secondAttribute="top" id="mEQ-0N-MFN"/>
+                            <constraint firstItem="UJd-GP-eoa" firstAttribute="centerX" secondItem="E8u-1T-DNb" secondAttribute="centerX" id="tJO-MQ-ZUX"/>
                             <constraint firstItem="8NS-5G-Sc8" firstAttribute="trailing" secondItem="aJM-4K-L84" secondAttribute="trailing" id="uQx-fg-Osz"/>
                             <constraint firstItem="8NS-5G-Sc8" firstAttribute="leading" secondItem="aJM-4K-L84" secondAttribute="leading" id="zKH-Tx-kUd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aJM-4K-L84"/>
                     </view>
                     <connections>
+                        <outlet property="loadSpinner" destination="UJd-GP-eoa" id="wKT-pz-WLh"/>
                         <outlet property="webView" destination="8NS-5G-Sc8" id="q76-mN-bAM"/>
                     </connections>
                 </viewController>
@@ -349,13 +358,21 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3E-YG-4ZD">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bo8-GD-4EX" id="c2I-mQ-9Ie"/>
+                                </connections>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="24i-Q7-PkB">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Z3E-YG-4ZD" firstAttribute="top" secondItem="tvy-bZ-TAY" secondAttribute="top" constant="44" id="1lS-pN-tDl"/>
                             <constraint firstItem="Z3E-YG-4ZD" firstAttribute="centerX" secondItem="tvy-bZ-TAY" secondAttribute="centerX" id="2tN-5a-NhK"/>
                             <constraint firstItem="eiZ-gF-3UE" firstAttribute="trailing" secondItem="Z3E-YG-4ZD" secondAttribute="trailing" id="85M-i8-GXx"/>
+                            <constraint firstItem="24i-Q7-PkB" firstAttribute="centerY" secondItem="QdQ-pq-txt" secondAttribute="centerY" id="Afm-IH-Iwl"/>
+                            <constraint firstItem="24i-Q7-PkB" firstAttribute="centerX" secondItem="QdQ-pq-txt" secondAttribute="centerX" id="NNF-h5-8cA"/>
                             <constraint firstItem="eiZ-gF-3UE" firstAttribute="top" secondItem="tvy-bZ-TAY" secondAttribute="top" id="YOH-rj-H8E"/>
                             <constraint firstItem="Z3E-YG-4ZD" firstAttribute="bottom" secondItem="tvy-bZ-TAY" secondAttribute="bottom" id="dx6-57-nYB"/>
                             <constraint firstItem="eiZ-gF-3UE" firstAttribute="bottom" secondItem="Z3E-YG-4ZD" secondAttribute="top" id="ezV-hj-LER"/>
@@ -365,6 +382,7 @@
                         <viewLayoutGuide key="safeArea" id="tvy-bZ-TAY"/>
                     </view>
                     <connections>
+                        <outlet property="loadSpinner" destination="24i-Q7-PkB" id="ljF-4f-Kjh"/>
                         <outlet property="webView" destination="Z3E-YG-4ZD" id="xpk-Bf-pf4"/>
                     </connections>
                 </viewController>

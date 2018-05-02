@@ -11,13 +11,16 @@
 import Foundation
 import UIKit
 
-class CalculatorVC: UIViewController {
+class CalculatorVC: UIViewController{
     
     @IBOutlet weak var webView: UIWebView!
-
+    @IBOutlet weak var loadSpinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        loadSpinner.hidesWhenStopped = true
         
         let htmlFile = Bundle.main.path(forResource: "desmos", ofType: "html")
         let html = try? String(contentsOfFile: htmlFile!, encoding: String.Encoding.utf8)
@@ -44,4 +47,16 @@ class CalculatorVC: UIViewController {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "aboutUsView")
         self.present(nextViewController, animated:true, completion:nil)
     }
+}
+
+extension CalculatorVC: UIWebViewDelegate {
+    
+    func webViewDidStartLoad(_ : UIWebView) {
+        loadSpinner.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_: UIWebView) {
+        loadSpinner.stopAnimating()
+    }
+    
 }
