@@ -17,21 +17,22 @@ class AnnouncementsVC: UIViewController {
     
     let formatter = DateFormatter()
     let datePicker = UIDatePicker()
-
-    let announcementsURL = "http://10.58.80.231:3000/api/announcements"
+    
+    private let refreshControl = UIRefreshControl()
+    
+    let announcementsURL = "http://10.58.81.46:3000/api/announcements"
     
     var subjects: [String] = []
     var messages: [String] = []
-    
     var sections: [Section] = []
     
-    private let refreshControl = UIRefreshControl()
+    var currentDate: Date = Date.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extendedLayoutIncludesOpaqueBars = true
         
-        changeDateLabel(Date.init())
+        self.changeDateText(currentDate)
         createDatePicker()
         getAnnouncements()
     }
@@ -57,14 +58,14 @@ class AnnouncementsVC: UIViewController {
         
     }
     
-    func changeDateLabel(_ date: Date) {
+    func changeDateText(_ date: Date) {
         formatter.dateFormat = "EEEE, MMMM dd, yyyy"
         announcementsDateText.text = formatter.string(from: date)
     }
     
     @objc func getAnnouncements() {
         
-        self.refreshControl.endRefreshing()
+        announcementsDateText.text = "Connecting to server..."
         
         let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
         
@@ -80,8 +81,14 @@ class AnnouncementsVC: UIViewController {
                 let alertController = UIAlertController(title: "Can't load announcements", message:
                     "Unable to connect to the server", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-                
                 self.present(alertController, animated: true, completion: nil)
+                
+                self.refreshControl.endRefreshing()
+                
+                DispatchQueue.main.async { //prevents error (edits UI in a different thread)
+                    self.changeDateText(self.currentDate)
+                }
+                
                 return;
             }
             
@@ -89,7 +96,7 @@ class AnnouncementsVC: UIViewController {
                 //store parsed data
                 let JSONinfo = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [NSDictionary]
 
-                DispatchQueue.main.async() { //prevents error
+                DispatchQueue.main.async() {
                     self.sections.removeAll()
                     self.subjects.removeAll()
                     self.messages.removeAll()
@@ -106,6 +113,10 @@ class AnnouncementsVC: UIViewController {
                     }
                     
                     self.tableView.reloadData() //tableView loads before, so we have to reload after adding sections
+                    
+                    self.refreshControl.endRefreshing()
+                    
+                    self.changeDateText(self.currentDate)
                 }
             } catch {
                 print("caught")
@@ -131,8 +142,7 @@ class AnnouncementsVC: UIViewController {
     }
     
     @objc func donePressed() {
-        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
-        announcementsDateText.text = formatter.string(from: datePicker.date)
+        changeDateText(datePicker.date)
         self.view.endEditing(true)
     }
 }
