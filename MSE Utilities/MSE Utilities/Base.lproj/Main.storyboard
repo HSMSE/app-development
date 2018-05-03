@@ -182,7 +182,6 @@
                                 <state key="normal" title="-&gt;"/>
                                 <connections>
                                     <action selector="tomorrow" destination="vwU-q2-37a" eventType="touchUpInside" id="5FP-sk-YiL"/>
-                                    <action selector="yesterday" destination="vwU-q2-37a" eventType="touchUpInside" id="6bq-Vm-M54"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-DC-HeV">
