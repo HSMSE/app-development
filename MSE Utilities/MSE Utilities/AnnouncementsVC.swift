@@ -22,6 +22,7 @@ class AnnouncementsVC: UIViewController {
     
     let announcementsURL = "http://10.58.81.164:3000/api/announcements"
     
+    var dates: [String] = []
     var subjects: [String] = []
     var messages: [String] = []
     var sections: [Section] = []
@@ -31,10 +32,19 @@ class AnnouncementsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.extendedLayoutIncludesOpaqueBars = true
+        self.tableView.refreshControl = nil
         
         self.changeDateText(currentDate)
         createDatePicker()
         getAnnouncements()
+        
+        //add refresh ability when setting up
+        if #available(iOS 10.0, *) {
+            tableView.refreshControl = refreshControl
+        } else {
+            tableView.addSubview(refreshControl)
+        }
+        refreshControl.addTarget(self, action: #selector(getAnnouncements), for: .valueChanged)
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,9 +74,6 @@ class AnnouncementsVC: UIViewController {
     }
     
     @objc func getAnnouncements() {
-        
-        announcementsDateText.text = "Connecting to server..."
-        
         let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
         
         request.timeoutInterval = 5
@@ -78,16 +85,11 @@ class AnnouncementsVC: UIViewController {
             
             //catch error
             if error != nil {
+                self.refreshControl.endRefreshing()
                 let alertController = UIAlertController(title: "Can't load announcements", message:
                     "Unable to connect to the server", preferredStyle: UIAlertControllerStyle.alert)
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-                
-                self.refreshControl.endRefreshing()
-                
-                DispatchQueue.main.async { //prevents error (edits UI in a different thread)
-                    self.changeDateText(self.currentDate)
-                }
                 
                 return;
             }
@@ -97,19 +99,20 @@ class AnnouncementsVC: UIViewController {
                 let JSONinfo = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [NSDictionary]
 
                 DispatchQueue.main.async() {
-                    self.sections.removeAll()
+                    self.dates.removeAll()
                     self.subjects.removeAll()
                     self.messages.removeAll()
-                    self.tableView.reloadData()
+                    self.sections.removeAll()
                     
                     if (JSONinfo!.count == 0) {
                         self.sections.append(Section(subject: "ERROR", message: "No announcements"))
                     } else {
                         for i in 0...JSONinfo!.count-1 {
                             self.formatter.dateFormat = "yyyy-MM-dd"
+                            self.dates.append("\(JSONinfo![i]["date"] as! String)")
                             self.subjects.append("\(JSONinfo![i]["subject"] as! String)")
                             self.messages.append("\(JSONinfo![i]["message"] as! String)")
-                            if (JSONinfo![i]["date"] as? String == self.formatter.string(from: self.currentDate)) {
+                            if (self.dates[i] == self.formatter.string(from: self.currentDate)) {
                                 self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
                             }
                         }
@@ -128,41 +131,47 @@ class AnnouncementsVC: UIViewController {
         task.resume()
     }
     
+    func adjustToDate() {
+        self.formatter.dateFormat = "yyyy-MM-dd"
+        self.sections.removeAll()
+        for i in 0...dates.count - 1 {
+            if (self.dates[i] == self.formatter.string(from: self.currentDate)) {
+                self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
+            }
+        }
+        self.tableView.reloadData()
+    }
+    
     func createDatePicker() {
-        
         datePicker.datePickerMode = UIDatePickerMode.date;
         
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([doneButton], animated: false)
+        let todayButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: #selector(todayPressed))
+        toolbar.setItems([doneButton, todayButton], animated: false)
         
         announcementsDateText.inputAccessoryView = toolbar
         
         announcementsDateText.inputView = datePicker
-        
     }
     
     @objc func donePressed() {
         changeDateText(datePicker.date)
         currentDate = datePicker.date
-        getAnnouncements()
+        adjustToDate()
         self.view.endEditing(true)
+    }
+    
+    @objc func todayPressed() {
+        datePicker.setDate(Date.init(), animated: true)
     }
 }
 
 extension AnnouncementsVC: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        //add refresh ability when setting up
-        if #available(iOS 10.0, *) {
-            tableView.refreshControl = refreshControl
-        } else {
-            tableView.addSubview(refreshControl)
-        }
-        refreshControl.addTarget(self, action: #selector(getAnnouncements), for: .valueChanged)
-        
         return sections.count
     }
     
