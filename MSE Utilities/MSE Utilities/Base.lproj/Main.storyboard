@@ -175,8 +175,18 @@
                                     <action selector="yesterday" destination="vwU-q2-37a" eventType="touchUpInside" id="8SN-Gl-s8a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrN-sS-JXf">
+                                <rect key="frame" x="40" y="72" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="-&gt;"/>
+                                <connections>
+                                    <action selector="tomorrow" destination="vwU-q2-37a" eventType="touchUpInside" id="5FP-sk-YiL"/>
+                                    <action selector="yesterday" destination="vwU-q2-37a" eventType="touchUpInside" id="6bq-Vm-M54"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-DC-HeV">
-                                <rect key="frame" x="72" y="72" width="270" height="30"/>
+                                <rect key="frame" x="82" y="72" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -204,6 +214,7 @@
                     <connections>
                         <outlet property="announcementsDateText" destination="Je8-DC-HeV" id="dvd-ZE-R8V"/>
                         <outlet property="tableView" destination="e6Y-pr-v7a" id="z5C-N2-IrZ"/>
+                        <outlet property="tomorrowButton" destination="XrN-sS-JXf" id="fxG-yX-yL9"/>
                         <outlet property="yesterdayButton" destination="GES-zG-imm" id="BYn-Ae-ce6"/>
                     </connections>
                 </viewController>

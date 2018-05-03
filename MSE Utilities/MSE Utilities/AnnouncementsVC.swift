@@ -15,6 +15,7 @@ class AnnouncementsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var announcementsDateText: UITextField!
     @IBOutlet weak var yesterdayButton: UIButton!
+    @IBOutlet weak var tomorrowButton: UIButton!
     
     let formatter = DateFormatter()
     let datePicker = UIDatePicker()
@@ -145,8 +146,11 @@ class AnnouncementsVC: UIViewController {
     }
     
     @IBAction func yesterday() {
-        print("hello")
         adjustToDate(Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!)
+    }
+    
+    @IBAction func tomorrow() {
+        adjustToDate(Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!)
     }
     
     /*
