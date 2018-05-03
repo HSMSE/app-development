@@ -1,11 +1,43 @@
 body {
-  margin: 40px 10px;
-  padding: 0;
-  font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-  font-size: 14px;
+	background-color: #CE93D8;
+	margin: 0px;
 }
 
-#calendar {
-  max-width: 900px;
-  margin: 0 auto;
+h1 {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto';
+	font-weight: 300;
+	display: inline-block;
+}
+
+.nav-bar {
+	width: 100%;
+	background-color: #eeeeee;
+	color: #2a2a2a;
+	padding: 8px;
+	margin: 0%;
+	margin-bottom: 5%;
+	display: inline-block;
+}
+
+.g-signin2 {
+	float: right;
+}
+
+.item1 {
+	margin-left: 2%;
+	width: 48%;
+}
+
+.item2 {
+	margin-right: 2%;
+	width: 48%;
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+#date {
+	float: right;
 }
