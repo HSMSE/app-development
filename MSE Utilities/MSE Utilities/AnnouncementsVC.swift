@@ -14,6 +14,7 @@ class AnnouncementsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var announcementsDateText: UITextField!
+    @IBOutlet weak var yesterdayButton: UIButton!
     
     let formatter = DateFormatter()
     let datePicker = UIDatePicker()
@@ -35,7 +36,6 @@ class AnnouncementsVC: UIViewController {
         self.tableView.refreshControl = nil
         
         self.changeDateText(currentDate)
-        createDatePicker()
         getAnnouncements()
         
         //add refresh ability when setting up
@@ -66,11 +66,6 @@ class AnnouncementsVC: UIViewController {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
         self.present(nextViewController, animated:true, completion:nil)
         
-    }
-    
-    func changeDateText(_ date: Date) {
-        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
-        announcementsDateText.text = formatter.string(from: date)
     }
     
     @objc func getAnnouncements() {
@@ -131,7 +126,14 @@ class AnnouncementsVC: UIViewController {
         task.resume()
     }
     
-    func adjustToDate() {
+    func changeDateText(_ date: Date) {
+        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        announcementsDateText.text = formatter.string(from: date)
+    }
+    
+    func adjustToDate(_ date: Date) {
+        currentDate = date
+        changeDateText(date)
         self.formatter.dateFormat = "yyyy-MM-dd"
         self.sections.removeAll()
         for i in 0...dates.count - 1 {
@@ -142,6 +144,12 @@ class AnnouncementsVC: UIViewController {
         self.tableView.reloadData()
     }
     
+    @IBAction func yesterday() {
+        print("hello")
+        adjustToDate(Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!)
+    }
+    
+    /*
     func createDatePicker() {
         datePicker.datePickerMode = UIDatePickerMode.date;
         
@@ -167,6 +175,7 @@ class AnnouncementsVC: UIViewController {
     @objc func todayPressed() {
         datePicker.setDate(Date.init(), animated: true)
     }
+    */
 }
 
 extension AnnouncementsVC: UITableViewDataSource {
