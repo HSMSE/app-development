@@ -22,6 +22,7 @@ class AnnouncementsVC: UIViewController {
     
     let announcementsURL = "http://10.58.81.164:3000/api/announcements"
     
+    var dates: [String] = []
     var subjects: [String] = []
     var messages: [String] = []
     var sections: [Section] = []
@@ -65,6 +66,19 @@ class AnnouncementsVC: UIViewController {
     
     @objc func getAnnouncements() {
         
+        if (sections.count > 0) {
+            self.sections.removeAll()
+            self.tableView.reloadData()
+            
+            for i in 0...dates.count - 1 {
+                if (self.dates[i] == self.formatter.string(from: self.currentDate)) {
+                    self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
+                }
+            }
+
+            self.tableView.reloadData()
+        }
+        
         announcementsDateText.text = "Connecting to server..."
         
         let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
@@ -97,9 +111,10 @@ class AnnouncementsVC: UIViewController {
                 let JSONinfo = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [NSDictionary]
 
                 DispatchQueue.main.async() {
-                    self.sections.removeAll()
+                    self.dates.removeAll()
                     self.subjects.removeAll()
                     self.messages.removeAll()
+                    self.sections.removeAll()
                     self.tableView.reloadData()
                     
                     if (JSONinfo!.count == 0) {
@@ -107,9 +122,10 @@ class AnnouncementsVC: UIViewController {
                     } else {
                         for i in 0...JSONinfo!.count-1 {
                             self.formatter.dateFormat = "yyyy-MM-dd"
+                            self.dates.append("\(JSONinfo![i]["date"] as! String)")
                             self.subjects.append("\(JSONinfo![i]["subject"] as! String)")
                             self.messages.append("\(JSONinfo![i]["message"] as! String)")
-                            if (JSONinfo![i]["date"] as? String == self.formatter.string(from: self.currentDate)) {
+                            if (self.dates[i] == self.formatter.string(from: self.currentDate)) {
                                 self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
                             }
                         }
@@ -136,7 +152,8 @@ class AnnouncementsVC: UIViewController {
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([doneButton], animated: false)
+        let todayButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: #selector(todayPressed))
+        toolbar.setItems([doneButton, todayButton], animated: false)
         
         announcementsDateText.inputAccessoryView = toolbar
         
@@ -147,6 +164,13 @@ class AnnouncementsVC: UIViewController {
     @objc func donePressed() {
         changeDateText(datePicker.date)
         currentDate = datePicker.date
+        getAnnouncements()
+        self.view.endEditing(true)
+    }
+    
+    @objc func todayPressed() {
+        changeDateText(Date.init())
+        currentDate = Date.init()
         getAnnouncements()
         self.view.endEditing(true)
     }
