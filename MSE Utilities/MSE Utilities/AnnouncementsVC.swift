@@ -17,12 +17,9 @@ class AnnouncementsVC: UIViewController {
     @IBOutlet weak var yesterdayButton: UIButton!
     @IBOutlet weak var tomorrowButton: UIButton!
     
-    let formatter = DateFormatter()
-    let datePicker = UIDatePicker()
-    
     private let refreshControl = UIRefreshControl()
     
-    let announcementsURL = "http://10.58.81.164:3000/api/announcements"
+    let announcementsURL: String = Global.serverURL + "/api/announcements"
     
     var dates: [String] = []
     var subjects: [String] = []
@@ -69,6 +66,15 @@ class AnnouncementsVC: UIViewController {
         
     }
     
+    @IBAction func yesterday() {
+        adjustToDate(Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!)
+    }
+    
+    
+    @IBAction func tomorrow() {
+        adjustToDate(Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!)
+    }
+    
     @objc func getAnnouncements() {
         let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
         
@@ -104,11 +110,11 @@ class AnnouncementsVC: UIViewController {
                         self.sections.append(Section(subject: "ERROR", message: "No announcements"))
                     } else {
                         for i in 0...JSONinfo!.count-1 {
-                            self.formatter.dateFormat = "yyyy-MM-dd"
+                            Global.formatter.dateFormat = "yyyy-MM-dd"
                             self.dates.append("\(JSONinfo![i]["date"] as! String)")
                             self.subjects.append("\(JSONinfo![i]["subject"] as! String)")
                             self.messages.append("\(JSONinfo![i]["message"] as! String)")
-                            if (self.dates[i] == self.formatter.string(from: self.currentDate)) {
+                            if (self.dates[i] == Global.formatter.string(from: self.currentDate)) {
                                 self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
                             }
                         }
@@ -128,59 +134,23 @@ class AnnouncementsVC: UIViewController {
     }
     
     func changeDateText(_ date: Date) {
-        formatter.dateFormat = "EEEE, MMMM dd, yyyy"
-        announcementsDateText.text = formatter.string(from: date)
+        Global.formatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        announcementsDateText.text = Global.formatter.string(from: date)
     }
     
     func adjustToDate(_ date: Date) {
         currentDate = date
         changeDateText(date)
-        self.formatter.dateFormat = "yyyy-MM-dd"
+        Global.formatter.dateFormat = "yyyy-MM-dd"
         self.sections.removeAll()
         for i in 0...dates.count - 1 {
-            if (self.dates[i] == self.formatter.string(from: self.currentDate)) {
+            if (self.dates[i] == Global.formatter.string(from: self.currentDate)) {
                 self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
             }
         }
         self.tableView.reloadData()
     }
     
-    @IBAction func yesterday() {
-        adjustToDate(Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!)
-    }
-    
-    
-    @IBAction func tomorrow() {
-        adjustToDate(Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!)
-    }
-    
-    /*
-    func createDatePicker() {
-        datePicker.datePickerMode = UIDatePickerMode.date;
-        
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        let todayButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: #selector(todayPressed))
-        toolbar.setItems([doneButton, todayButton], animated: false)
-        
-        announcementsDateText.inputAccessoryView = toolbar
-        
-        announcementsDateText.inputView = datePicker
-    }
-    
-    @objc func donePressed() {
-        changeDateText(datePicker.date)
-        currentDate = datePicker.date
-        adjustToDate()
-        self.view.endEditing(true)
-    }
-    
-    @objc func todayPressed() {
-        datePicker.setDate(Date.init(), animated: true)
-    }
-    */
 }
 
 extension AnnouncementsVC: UITableViewDataSource {
