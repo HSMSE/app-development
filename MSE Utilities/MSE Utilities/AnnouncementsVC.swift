@@ -143,6 +143,11 @@ class AnnouncementsVC: UIViewController {
         changeDateText(date)
         Global.formatter.dateFormat = "yyyy-MM-dd"
         self.sections.removeAll()
+        
+        if (dates.count == 0) {
+            return
+        }
+        
         for i in 0...dates.count - 1 {
             if (self.dates[i] == Global.formatter.string(from: self.currentDate)) {
                 self.sections.append(Section(subject: self.subjects[i], message: self.messages[i]))
