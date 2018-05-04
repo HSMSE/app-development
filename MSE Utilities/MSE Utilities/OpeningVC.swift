@@ -71,7 +71,7 @@ class OpeningVC: UIViewController {
             //catch error
             if error != nil {
                 
-                return;
+                return
             }
             
             do {

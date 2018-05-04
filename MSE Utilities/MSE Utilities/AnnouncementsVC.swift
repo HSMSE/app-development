@@ -93,7 +93,7 @@ class AnnouncementsVC: UIViewController {
                 alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                 self.present(alertController, animated: true, completion: nil)
                 
-                return;
+                return
             }
             
             do {
