@@ -69,18 +69,12 @@ class AboutUsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    
-    @IBAction func toCalendar(_ sender: Any) {
+    @IBAction func toOpening(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calendarView")
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "openingView")
         self.present(nextViewController, animated:true, completion:nil)
     }
     
-    @IBAction func toCalculator(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "calculatorView")
-        self.present(nextViewController, animated:true, completion:nil)
-    }
+
 }

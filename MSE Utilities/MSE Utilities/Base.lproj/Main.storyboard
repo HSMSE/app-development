@@ -33,31 +33,15 @@
                                 <items>
                                     <navigationItem title="Graphing Calculator" id="SGV-af-2LI">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="jkJ-9y-ezP">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZGE-av-MkY">
-                                                <rect key="frame" x="20" y="5" width="40" height="34"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZGE-av-MkY">
+                                                <rect key="frame" x="20" y="0.0" width="40" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="⟪❓">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="☰">
+                                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="toAboutUs:" destination="QLT-En-VHD" eventType="touchUpInside" id="dEi-DU-ICT"/>
-                                                </connections>
-                                            </button>
-                                            <connections>
-                                                <action selector="toAboutUs:" destination="QLT-En-VHD" id="Yo8-cu-415"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="9ET-sg-FcV">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5AD-tE-aeE">
-                                                <rect key="frame" x="354" y="5" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="📋 ⟫">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="yHQ-b3-s6d"/>
+                                                    <action selector="toOpening:" destination="QLT-En-VHD" eventType="touchUpInside" id="nB5-pj-bQF"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -137,29 +121,16 @@
                                 <items>
                                     <navigationItem title="HSMSE Announcements" id="pJZ-et-Pua">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="99n-HB-MMG">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qx0-lT-jK5">
-                                                <rect key="frame" x="20" y="5" width="40" height="34"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qx0-lT-jK5">
+                                                <rect key="frame" x="20" y="0.0" width="52" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <inset key="imageEdgeInsets" minX="10" minY="10" maxX="0.0" maxY="10"/>
-                                                <state key="normal" title="⟪ 📈">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" title="☰">
+                                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="toCalculator:" destination="vwU-q2-37a" eventType="touchUpInside" id="WHs-IM-lCF"/>
-                                                </connections>
-                                            </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="zt0-er-3pF">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yOZ-7p-EbM">
-                                                <rect key="frame" x="354" y="5" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="📅 ⟫">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="toCalendar:" destination="vwU-q2-37a" eventType="touchUpInside" id="1ay-Ho-C0T"/>
+                                                    <action selector="toOpening:" destination="vwU-q2-37a" eventType="touchUpInside" id="PUU-Xi-ikQ"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -205,7 +176,7 @@
         <!--OpeningVC-->
         <scene sceneID="x4a-f7-kkc">
             <objects>
-                <viewController id="pDC-Hf-xlQ" customClass="OpeningVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="openingView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pDC-Hf-xlQ" customClass="OpeningVC" customModule="MSE_Utilities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g0Z-6x-RFF" customClass="OpeningViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,35 +293,17 @@
                                 <items>
                                     <navigationItem title="School Calendar" id="0a6-TL-L80">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="3K7-MS-ipT">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UXw-4d-eEl">
-                                                <rect key="frame" x="20" y="5" width="45" height="34"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UXw-4d-eEl">
+                                                <rect key="frame" x="20" y="1" width="49" height="42"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="⟪ 📋 ">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="☰">
+                                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="5mj-oI-H79"/>
-                                                    <action selector="toAnnouncements:" destination="bo8-GD-4EX" eventType="touchUpInside" id="u5f-RV-7QM"/>
+                                                    <action selector="toOpening:" destination="bo8-GD-4EX" eventType="touchUpInside" id="p2E-In-mqA"/>
                                                 </connections>
                                             </button>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="tbO-ea-K5s">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bIn-nu-wdX">
-                                                <rect key="frame" x="354" y="5" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="❓⟫ ">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="toAboutUs:" destination="bo8-GD-4EX" eventType="touchUpInside" id="iFU-n1-5pB"/>
-                                                    <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="RhU-le-nJF"/>
-                                                </connections>
-                                            </button>
-                                            <connections>
-                                                <action selector="toAboutUs:" destination="bo8-GD-4EX" id="gLe-s9-i9y"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -407,37 +360,17 @@
                                 <items>
                                     <navigationItem title="About Us" id="qlE-Xi-hrZ">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="ggf-0V-Sdv">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gRg-mQ-Mti">
-                                                <rect key="frame" x="20" y="5" width="40" height="34"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gRg-mQ-Mti">
+                                                <rect key="frame" x="20" y="1" width="49" height="42"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="⟪ 📅">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="☰">
+                                                    <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="toCalendar:" destination="nBi-BY-hjh" eventType="touchUpInside" id="lg3-EH-ZZW"/>
+                                                    <action selector="toOpening:" destination="nBi-BY-hjh" eventType="touchUpInside" id="Wt3-3S-luh"/>
                                                 </connections>
                                             </button>
-                                            <connections>
-                                                <action selector="toCalendar:" destination="nBi-BY-hjh" id="9t9-Nu-ngS"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="4er-uE-DBT">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4QX-xr-zAP">
-                                                <rect key="frame" x="354" y="5" width="40" height="34"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" title="📈 ⟫">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="toAnnouncements:" destination="QLT-En-VHD" eventType="touchUpInside" id="gZR-4K-g2Q"/>
-                                                    <action selector="toCalculator:" destination="nBi-BY-hjh" eventType="touchUpInside" id="u2c-a5-Vnk"/>
-                                                </connections>
-                                            </button>
-                                            <connections>
-                                                <action selector="toCalculator:" destination="nBi-BY-hjh" id="aER-uB-Qf1"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
