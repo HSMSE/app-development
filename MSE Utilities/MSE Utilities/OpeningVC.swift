@@ -13,7 +13,7 @@ import UIKit
 
 class OpeningVC: UIViewController {
 
-    let motdURL = "http://10.58.81.164:3000/api/motd"
+    let motdURL = Global.serverURL + "/api/motd"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,7 @@ class OpeningVC: UIViewController {
             //catch error
             if error != nil {
                 
-                return;
+                return
             }
             
             do {
