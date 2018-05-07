@@ -33,20 +33,14 @@ class CalculatorVC: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func toAnnouncements(_ sender: Any) {
+    @IBAction func toOpening(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "announcementsView")
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "openingView")
         self.present(nextViewController, animated:true, completion:nil)
     }
-
     
-    @IBAction func toAboutUs(_ sender: Any) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "aboutUsView")
-        self.present(nextViewController, animated:true, completion:nil)
-    }
+
 }
 
 extension CalculatorVC: UIWebViewDelegate {
