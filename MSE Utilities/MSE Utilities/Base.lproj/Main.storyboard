@@ -182,7 +182,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="🔵"/>
                                         <connections>
-                                            <action selector="tomorrow" destination="vwU-q2-37a" eventType="touchUpInside" id="dLc-3q-VfC"/>
+                                            <action selector="today" destination="vwU-q2-37a" eventType="touchUpInside" id="EgV-ne-vm0"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrN-sS-JXf">
