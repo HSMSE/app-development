@@ -21,7 +21,10 @@ class OpeningVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        showAlert()
+        if (Global.firstStart) {
+            showAlert()
+            Global.firstStart = false
+        }
     }
     
     override func didReceiveMemoryWarning() {
