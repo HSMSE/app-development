@@ -13,7 +13,7 @@ import UIKit
 class AnnouncementsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var announcementsDateText: UITextField!
+    @IBOutlet weak var announcementsDateLabel: UILabel!
     @IBOutlet weak var yesterdayButton: UIButton!
     @IBOutlet weak var tomorrowButton: UIButton!
     
@@ -70,10 +70,15 @@ class AnnouncementsVC: UIViewController {
         adjustToDate(Calendar.current.date(byAdding: .day, value: -1, to: currentDate)!)
     }
     
+    @IBAction func today() {
+        adjustToDate(Date.init())
+    }
     
     @IBAction func tomorrow() {
         adjustToDate(Calendar.current.date(byAdding: .day, value: 1, to: currentDate)!)
     }
+    
+    
     
     @objc func getAnnouncements() {
         let request = NSMutableURLRequest(url: URL(string: announcementsURL)!)
@@ -135,7 +140,7 @@ class AnnouncementsVC: UIViewController {
     
     func changeDateText(_ date: Date) {
         Global.formatter.dateFormat = "EEEE, MMMM dd, yyyy"
-        announcementsDateText.text = Global.formatter.string(from: date)
+        announcementsDateLabel.text = Global.formatter.string(from: date)
     }
     
     func adjustToDate(_ date: Date) {

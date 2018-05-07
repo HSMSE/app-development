@@ -166,43 +166,63 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GES-zG-imm">
-                                <rect key="frame" x="8" y="72" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="&lt;-"/>
-                                <connections>
-                                    <action selector="yesterday" destination="vwU-q2-37a" eventType="touchUpInside" id="8SN-Gl-s8a"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrN-sS-JXf">
-                                <rect key="frame" x="40" y="72" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="-&gt;"/>
-                                <connections>
-                                    <action selector="tomorrow" destination="vwU-q2-37a" eventType="touchUpInside" id="5FP-sk-YiL"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je8-DC-HeV">
-                                <rect key="frame" x="82" y="72" width="250" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <nil key="textColor"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UC0-I0-bqy">
+                                <rect key="frame" x="20" y="68" width="90" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GES-zG-imm">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="◀"/>
+                                        <connections>
+                                            <action selector="yesterday" destination="vwU-q2-37a" eventType="touchUpInside" id="8SN-Gl-s8a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZ9-sN-j7n">
+                                        <rect key="frame" x="30" y="5" width="30" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="🔵"/>
+                                        <connections>
+                                            <action selector="tomorrow" destination="vwU-q2-37a" eventType="touchUpInside" id="dLc-3q-VfC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XrN-sS-JXf">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="▶"/>
+                                        <connections>
+                                            <action selector="tomorrow" destination="vwU-q2-37a" eventType="touchUpInside" id="5FP-sk-YiL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Avb-oy-xKk"/>
+                                    <constraint firstItem="qZ9-sN-j7n" firstAttribute="centerX" secondItem="UC0-I0-bqy" secondAttribute="centerX" id="MNr-F3-Ulh"/>
+                                    <constraint firstItem="qZ9-sN-j7n" firstAttribute="top" secondItem="UC0-I0-bqy" secondAttribute="top" constant="5" id="qOM-vr-ChW"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMc-Ph-Wn9">
+                                <rect key="frame" x="118" y="77" width="257" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="UC0-I0-bqy" firstAttribute="top" secondItem="dJV-yQ-uTE" secondAttribute="bottom" constant="4" id="3mM-Rb-X4m"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="bottom" secondItem="dtQ-5l-5HD" secondAttribute="bottom" id="4zj-8d-ccg"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="UC0-I0-bqy" secondAttribute="bottom" constant="4" id="5JP-UL-SKD"/>
+                            <constraint firstItem="e6Y-pr-v7a" firstAttribute="top" secondItem="YMc-Ph-Wn9" secondAttribute="bottom" constant="12" id="E7p-Sp-6H5"/>
+                            <constraint firstItem="UC0-I0-bqy" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" constant="20" id="IFi-EC-B6t"/>
+                            <constraint firstItem="YMc-Ph-Wn9" firstAttribute="centerY" secondItem="UC0-I0-bqy" secondAttribute="centerY" id="JGj-as-fRZ"/>
+                            <constraint firstItem="YMc-Ph-Wn9" firstAttribute="leading" secondItem="UC0-I0-bqy" secondAttribute="trailing" constant="8" id="ZaU-z6-bz1"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="trailing" secondItem="dtQ-5l-5HD" secondAttribute="trailing" id="aCh-gR-2ZA"/>
+                            <constraint firstItem="UC0-I0-bqy" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" constant="20" id="bsz-MC-1cr"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="leading" secondItem="dtQ-5l-5HD" secondAttribute="leading" id="dgX-Ah-0Rm"/>
                             <constraint firstItem="dJV-yQ-uTE" firstAttribute="top" secondItem="dtQ-5l-5HD" secondAttribute="top" id="hfd-PV-PBh"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="leading" secondItem="dJV-yQ-uTE" secondAttribute="leading" id="iP4-SS-bQ4"/>
+                            <constraint firstItem="YMc-Ph-Wn9" firstAttribute="centerX" secondItem="XIC-m2-ypg" secondAttribute="centerX" constant="39.5" id="r4b-1Z-9rr"/>
                             <constraint firstItem="e6Y-pr-v7a" firstAttribute="trailing" secondItem="dJV-yQ-uTE" secondAttribute="trailing" id="sxg-ma-7YL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dtQ-5l-5HD"/>
@@ -211,7 +231,7 @@
                         </connections>
                     </view>
                     <connections>
-                        <outlet property="announcementsDateText" destination="Je8-DC-HeV" id="dvd-ZE-R8V"/>
+                        <outlet property="announcementsDateLabel" destination="YMc-Ph-Wn9" id="dmt-Pk-LhF"/>
                         <outlet property="tableView" destination="e6Y-pr-v7a" id="z5C-N2-IrZ"/>
                         <outlet property="tomorrowButton" destination="XrN-sS-JXf" id="fxG-yX-yL9"/>
                         <outlet property="yesterdayButton" destination="GES-zG-imm" id="BYn-Ae-ce6"/>
