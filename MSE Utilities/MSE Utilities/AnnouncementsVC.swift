@@ -131,7 +131,7 @@ class AnnouncementsVC: UIViewController {
     }
     
     func changeDateText(_ date: Date) {
-        Global.formatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        Global.formatter.dateFormat = "EEE, MMM dd, yyyy"
         announcementsDateLabel.text = Global.formatter.string(from: date)
     }
     
