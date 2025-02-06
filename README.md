@@ -1,5 +1,7 @@
 # app-development
-student utility app
+Student utility iOS application including daily announcements log, school calendar, and calculator feature
+
+Xcode front-end and node.js asynchronous server developed by the App Development Internship at the High School for Math, Science, and Engineering
 
 ### Dependencies
 * [node.js](https://nodejs.org/en/)
@@ -8,8 +10,5 @@ student utility app
 * [google-id-token-verifier](https://www.npmjs.com/package/google-id-token-verifier)
 * [python-shell](https://www.npmjs.com/package/python-shell)
 
-### Todo
-* Have an actual readme
-
-### Server
+### Server URL
 * http://138.197.106.12:7777/app/v1.0/?task=announcements
